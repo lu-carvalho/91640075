@@ -93,8 +93,5 @@ int main(void)
     else
     {
         printf("INVALID\n");
-        return 0;
     }
-
-
 }
