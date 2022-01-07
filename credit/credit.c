@@ -38,6 +38,15 @@ int main(void)
     do
     {
         //remove the last digit and add to sum1
+        mod1 = x % 10;
+        x = x/10;
+        sum1 = sum1 + mod1;
+
+        //remove the second last digit and add digits to sum2
+        mod2 = x % 10;
+        x = x/10;
+
+        //double the last digit and add its digits to sum2
     }
 
 
