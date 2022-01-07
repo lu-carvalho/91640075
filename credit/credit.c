@@ -39,25 +39,25 @@ int main(void)
     {
         //remove the last digit and add to sum1
         mod1 = x % 10;
-        x = x/10;
+        x = x / 10;
         sum1 = sum1 + mod1;
 
         //remove the second last digit and add digits to sum2
         mod2 = x % 10;
-        x = x/10;
+        x = x / 10;
 
         //double the last digit and add its digits to sum2
         mod2 = mod2 * 2;
         d1 = mod2 % 10;
-        d2 = mod2/10;
+        d2 = mod2 / 10;
         sum2 = sum2 + d1 + d2;
     }
-    while(x > 0);
+    while (x > 0);
 
     total = sum1 + sum2;
 
     //now we check if it passes the algorithm
-    if(total % 10 != 0)
+    if (total % 10 != 0)
     {
         printf("INVALID\n");
         return 0;
@@ -67,24 +67,24 @@ int main(void)
     long start = n;
     do
     {
-        start = start/10;
+        start = start / 10;
     }
-    while(start > 100);
+    while (start > 100);
 
     //check if it is a mastercard card
-    if((start/10 == 5) && (0 < start % 10 && start % 10 < 6))
+    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6))
     {
         printf("MASTERCARD\n");
     }
 
     //or a amex card
-    else if((start/10 == 3) && (start%10 == 7 || start%10 ==4))
+    else if ((start / 10 == 3) && (start % 10 == 7 || start % 10 == 4))
     {
         printf("AMEX\n");
     }
 
     //last but not least, or a visa card
-    else if(start/10 == 4)
+    else if (start / 10 == 4)
     {
         printf("VISA\n");
     }
