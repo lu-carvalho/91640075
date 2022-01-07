@@ -20,7 +20,7 @@ int main(void)
 
     if (i != 13 && i != 15 && i != 16)
     {
-        printf("INVALID\n");
+        printf("INVALID1\n");
         return 0;
     }
 
@@ -59,7 +59,7 @@ int main(void)
     //now we check if it passes the algorithm
     if(total % 10 != 0)
     {
-        printf("INVALID\n");
+        printf("INVALID2\n");
         return 0;
     }
 
@@ -92,7 +92,7 @@ int main(void)
     //if none of those are true, than
     else
     {
-        printf("INVALID\n");
+        printf("INVALID3\n");
         return 0;
     }
 
