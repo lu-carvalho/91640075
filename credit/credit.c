@@ -78,7 +78,7 @@ int main(void)
     }
 
     //or a amex card
-    if((start/10 == 3) && (start%10 == 7 || start%10 ==4))
+    else if((start/10 == 3) && (start%10 == 7 || start%10 ==4))
     {
         printf("AMEX\n");
     }
