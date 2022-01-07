@@ -52,9 +52,8 @@ int main(void)
         d2 = mod2/10;
         sum2 = sum2 + d1+d2;
     }
-    
+    while( x > 0);
 
+    total = sum1 + sum2;
 
-
-    long x = n;
 }
