@@ -9,7 +9,7 @@ int main(void)
 
     //count length of the number
     int i = 0;
-    int cc = n;
+    long cc = n;
     while (cc > 0)
     {
         cc = cc / 10;
