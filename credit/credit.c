@@ -25,9 +25,22 @@ int main(void)
     }
 
     //if the lengh is adequate, the sum must be calculated
-    //sum1 
+
     int sum1 = 0;
     int sum2 = 0;
+    long x = n;
+    int total = 0;
+    int mod1;
+    int mod2;
+    int d1;
+    int d2;
+
+    do
+    {
+        //remove the last digit and add to sum1
+    }
+
+
 
     long x = n;
 }
