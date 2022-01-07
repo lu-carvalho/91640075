@@ -72,7 +72,7 @@ int main(void)
     while(start > 100);
 
     //check if it is a mastercard card
-    if((start/10 == 5) && (start%10 == 1 || start%10 == 2 || start%10 == 3 || start%10 == 4 || start%10 == 5))
+    if((start/10 == 5) && (0 < start % 10 && start % 10 < 6))
     {
         printf("MASTERCARD\n");
     }
