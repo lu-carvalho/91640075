@@ -20,7 +20,7 @@ int main(void)
 
     if (i != 13 && i != 15 && i != 16)
     {
-        printf("INVALID1\n");
+        printf("INVALID\n");
         return 0;
     }
 
