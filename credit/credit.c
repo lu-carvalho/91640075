@@ -59,7 +59,7 @@ int main(void)
     //now we check if it passes the algorithm
     if(total % 10 != 0)
     {
-        printf("INVALID2\n");
+        printf("INVALID\n");
         return 0;
     }
 
@@ -92,7 +92,7 @@ int main(void)
     //if none of those are true, than
     else
     {
-        printf("INVALID3\n");
+        printf("INVALID\n");
         return 0;
     }
 
