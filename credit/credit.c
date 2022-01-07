@@ -72,7 +72,7 @@ int main(void)
     while(start > 100);
 
     //check if it is a mastercard card
-    if(51 <= start <= 55)
+    if(51 =< start =< 55)
     {
         printf("MASTERCARD\n");
     }
