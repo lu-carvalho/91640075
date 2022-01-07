@@ -63,11 +63,38 @@ int main(void)
         return 0;
     }
 
-    //great, all set, now we will check what type of card is this
+    //great, all set, now we will extract the first two digits
     long start = n;
     do
     {
         start = start/10;
     }
     while(start > 100);
+
+    //check if it is a mastercard card
+    if(51 <= start <= 55)
+    {
+        printf("MASTERCARD\n");
+    }
+
+    //or a amex card
+    if((start/10 == 3) && (start%10 == 7 || start%10 ==4))
+    {
+        printf("AMEX\n");
+    }
+
+    //last but not least, or a visa card
+    else if(start/10 == 4)
+    {
+        printf("VISA\n");
+    }
+
+    //if none of those are true, than
+    else
+    {
+        printf("INVALID\n");
+        return 0;
+    }
+
+
 }
