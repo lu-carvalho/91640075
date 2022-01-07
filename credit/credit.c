@@ -25,5 +25,9 @@ int main(void)
     }
 
     //if the lengh is adequate, the sum must be calculated
-    
+    //sum1 
+    int sum1 = 0;
+    int sum2 = 0;
+
+    long x = n;
 }
