@@ -12,7 +12,7 @@ int main(void)
     int cc = n;
     while (cc > 0)
     {
-        cc = cc/10;
+        cc = cc / 10;
         i++;
     }
 
