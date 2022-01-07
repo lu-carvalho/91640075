@@ -57,5 +57,17 @@ int main(void)
     total = sum1 + sum2;
 
     //now we check if it passes the algorithm
-    if
+    if(total % 10 != 0)
+    {
+        printf("INVALID\n");
+        return 0;
+    }
+
+    //great, all set, now we will check what type of card is this
+    long start = n;
+    do
+    {
+        start = start/10;
+    }
+    while(start > 100);
 }
