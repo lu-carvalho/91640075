@@ -47,6 +47,10 @@ int main(void)
         x = x/10;
 
         //double the last digit and add its digits to sum2
+        mod2 = mod2 * 2;
+        d1 = mod2 % 10;
+        d2 = mod2/10;
+        sum2 = sum2 + d1+d2
     }
 
 
