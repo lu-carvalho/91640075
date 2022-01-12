@@ -2,6 +2,7 @@
 #include <cs50.h>
 #include <string.h>
 
+
 int main(void)
 {
     //get a string from the user
