@@ -12,3 +12,4 @@ int main(void)
     printf("%s\n", text);
 }
 
+int count_letters(string text)
