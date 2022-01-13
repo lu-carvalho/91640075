@@ -12,14 +12,21 @@ int main(void)
     text = get_string("Text: \n");
 
     printf("%s\n", text);
+
+    for (int i = 0; i < strlen(text); i++)
+    {
+        count_letters(text);
+    }
 }
 
 int count_letters(string text)
 {
     int letters;
+    int i = 0;
+
     if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
     {
         letters++;
     }
-    printf("%i letters \n", letters);
+    return letters;
 }
