@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -15,6 +16,8 @@ int main(void)
     count_letters(text);
 
     count_words(text);
+
+    count_sentences(text);
 }
 
 int count_letters(string text)
@@ -42,5 +45,19 @@ int count_words(string text)
         }
     }
     printf("%i words \n", words);
+    return 0;
+}
+
+int count_sentences(string text)
+{
+    int sentences = 0;
+    for(int i = 0; i< strlen(text); i++)
+    {
+        if((text[i] == '.') || (text[i] == '!') || (text[i] == '?'))
+        {
+            sentences++;
+        }
+    }
+    printf("%i sentences \n", sentences);
     return 0;
 }
