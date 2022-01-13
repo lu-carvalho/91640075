@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 
+int count_words(string text);
 
 int main(void)
 {
@@ -15,7 +16,6 @@ int main(void)
 
 int count_letters(string text)
 {
-    int letters = 0
     for (int i = 0; i < strlen(text); i++)
     {
         count_words(text);
