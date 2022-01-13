@@ -26,6 +26,8 @@ int count_words(string text)
 {
     int letters;
     if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
-    letters++;
+    {
+        letters++;
+    }
     printf("%i letters \n", letters);
 }
