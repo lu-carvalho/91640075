@@ -13,11 +13,16 @@ int main(void)
     string text;
     text = get_string("Text: ");
 
-    int letters = count_letters(text);
+    int l = count_letters(text);
+    int w = count_words(text);
+    int s = count_sentences(text);
 
-    int words = count_words(text);
+    float L = l / (100 * words);
+    float S = s / (100 * words);
+    float index = 0.0588 * L - 0.296 * S - 15.8;
 
-    int sentences = count_sentences(text);
+    if(index )
+
 
 }
 
