@@ -31,7 +31,7 @@ int main(void)
 
     else
     {
-        printf("Tie!");
+        printf("Tie!\n");
     }
 }
 
