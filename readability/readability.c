@@ -19,7 +19,8 @@ int main(void)
 
     float c = (0.0588 * letters / words * 100) - (0.296 * sentences / words *100) - 15.8;
     int index = round(c);
-
+    printf("%i\n", index);
+    
     if(index < 1)
     {
         printf("Before Grade 1\n");
