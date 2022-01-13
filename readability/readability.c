@@ -21,12 +21,15 @@ int main(void)
 
 int count_letters(string text)
 {
-    int letters;
-    int i = 0;
+    int letters = 0;
+    string text;
 
-    if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+    for (int i = 0; i < strlen(text); i++)
     {
-        letters++;
+        if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+        {
+            letters++;
+        }
     }
-    return letters;
+    printf("%i letters \n", letters);
 }
