@@ -28,3 +28,9 @@ int count_letters(string text)
     printf("%i letters \n", letters);
     return 0;
 }
+
+int count_words(string text)
+{
+    int words = 0;
+    for(int i = 0; )
+}
