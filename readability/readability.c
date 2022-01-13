@@ -18,13 +18,13 @@ int main(void)
 
 int count_letters(string text)
 {
-    int i = 0;
+    int letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
         {
-            i++;
+            letters++;
         }
     }
-    printf("%i letters \n", i);
+    printf("%i letters \n", letters);
 }
