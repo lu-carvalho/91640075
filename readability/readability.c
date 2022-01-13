@@ -18,10 +18,7 @@ int main(void)
     int sentences = count_sentences(text);
 
     float c = (0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8;
-    printf("%f\n", c);
-
     int index = round(c);
-    printf("%i\n", index);
 
     if(index < 1)
     {
