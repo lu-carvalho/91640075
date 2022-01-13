@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
+#include <math.h>
 
 
 int main(void)
@@ -14,5 +15,17 @@ int main(void)
 
 int count_letters(string text)
 {
-    int letters = 
+    int letters = 0
+    for (int i = 0; i < strlen(text); i++)
+    {
+        count_words(text);
+    }
+}
+
+int count_words(string text)
+{
+    int letters;
+    if((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+    letters++;
+    printf("%i letters \n", letters);
 }
