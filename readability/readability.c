@@ -14,7 +14,6 @@ int main(void)
     text = get_string("Text: ");
 
     int letters = count_letters(text);
-    printf()
     int words = count_words(text);
     int sentences = count_sentences(text);
 
@@ -53,7 +52,7 @@ int count_letters(string text)
         }
     }
     //turning this into a comment so i don't have to delet but it won't be necessary printf("%i letters \n", letters);
-    return 0;
+    return letters;
 }
 
 int count_words(string text)
@@ -67,7 +66,7 @@ int count_words(string text)
         }
     }
     //turning this into a comment so i don't have to delet but it won't be necessary printf("%i words \n", words);
-    return 0;
+    return words;
 }
 
 int count_sentences(string text)
@@ -81,5 +80,5 @@ int count_sentences(string text)
         }
     }
     //turning this into a comment so i don't have to delet but it won't be necessary printf("%i sentences \n", sentences);
-    return 0;
+    return sentences;
 }
