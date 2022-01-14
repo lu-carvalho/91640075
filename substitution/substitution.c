@@ -40,7 +40,7 @@ int main (int argv, string agrv[])
         }
     }
     //prompt user for they plaintext
-    get_string plaintext = 
+    string plaintext = get_string("Plain text: \n")
 
 
 
