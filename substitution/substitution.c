@@ -40,7 +40,11 @@ int main (int argv, string agrv[])
         }
     }
     //prompt user for they plaintext
-    string plaintext = get_string("Plain text: \n");
+    string plaintext = get_string("plaintext:");
+
+    //convert plaintext into cyphertext
+
+    
 
 
 
