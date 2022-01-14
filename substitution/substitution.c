@@ -44,6 +44,7 @@ int main (int argv, string agrv[])
 
     //convert plaintext into cyphertext
 
+    key == toupper(key);
     
 
 
