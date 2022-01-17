@@ -9,7 +9,7 @@ int main(int argc, string argv[])
     //the user must prompt the key right when executing the program
     if (argc != 2)
     {
-        printf("Please input only one number as key\n");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 
