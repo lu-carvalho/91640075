@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <string.h>
 #include <stdio.h>
-#include <cstype.h>
+#include <ctype.h>
 #include <math.h>
 
 int main(int argc, string argv[])
@@ -19,18 +19,18 @@ int main(int argc, string argv[])
     {
         if (!isdigit(k[i]))
         {
-            printf("key\n")
+            printf("Usage: ./caesar key\n");
             return 1;
         }
     }
-
+    printf("success, key is %s\n", k);
     //the program now asks the user to prompt the plaintext
-    string pt = get_string("plaintext:  ");
+    //string pt = get_string("plaintext:  ");
 
     //the program calculates the cyphertext
 
 
 
     //the program gives back to the user the cyphertext
-    printf("cyphertext: %s", ct);
+    //printf("cyphertext: %s", ct);
 }
