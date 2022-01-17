@@ -27,7 +27,9 @@ int main(int argc, string argv[])
     //the program now asks the user to prompt the plaintext
     string pt = get_string("plaintext:  ");
 
-    //the program calculates the cyphertext
+    //the program calculates the cyphertext, considering if the character is upper or lowercase
+
+    
 
 
 
