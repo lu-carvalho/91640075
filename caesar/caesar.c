@@ -13,7 +13,11 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    else if ()
+    string k = argv[1];
+    for (int i = 0; i < strlen(k); i++)
+    {
+        if (argv[i] != )
+    }
     //if the user prompts a non valid key, the program should remind it how to use the program
     //the program now asks the user to prompt the plaintext
     //the program gives back to the user the cyphertext
