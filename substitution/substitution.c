@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int main (int argc, string argv[])
+int main(int argc, string argv[])
 {
     //make sure the user is inputing only one command line argument
     if (argc != 2)
@@ -68,7 +68,10 @@ int main (int argc, string argv[])
             printf("%c", key[letter] + 32);
             //above i added 32 to make sure I maintain the original case of the cyphertext, since the key is all uppercase
         }
-        else printf("%c", plaintext[i]);
+        else
+        {
+            printf("%c", plaintext[i]);
+        }
     }
     printf("\n");
 }
