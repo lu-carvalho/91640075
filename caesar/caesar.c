@@ -13,6 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    //if the user prompts a non valid key, the program should remind it how to use the program
     string k = argv[1];
     for (int i = 0; i < strlen(k); i++)
     {
@@ -22,7 +23,14 @@ int main(int argc, string argv[])
             return 1;
         }
     }
-    //if the user prompts a non valid key, the program should remind it how to use the program
+
     //the program now asks the user to prompt the plaintext
+    string pt = get_string("plaintext:  ");
+
+    //the program calculates the cyphertext
+
+
+
     //the program gives back to the user the cyphertext
+    printf("cyphertext: %s", ct);
 }
