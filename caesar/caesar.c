@@ -7,6 +7,7 @@
 int main(int argc, string argv[])
 {
     //the user must prompt the key right when executing the program
+    //if the user prompts a non valid key, the program should remind it how to use the program
     //the program now asks the user to prompt the plaintext
     //the program gives back to the user the cyphertext
 }
