@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main(int argc, string argv[])
 {
@@ -29,7 +30,7 @@ int main(int argc, string argv[])
 
     //the program calculates the cyphertext, considering if the character is upper or lowercase
 
-    
+
 
 
 
