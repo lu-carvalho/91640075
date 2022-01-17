@@ -53,7 +53,7 @@ int main (int argc, string argv[])
         }
     }
     //print the ciphertext considering three possible scnearios
-    printf("ciphertex: ");
+    printf("ciphertext: ");
 
     for (int i = 0; i < strlen(plaintext); i++)
     {
