@@ -55,6 +55,22 @@ int main (int argv, string agrv[])
     //print the ciphertext considering three possible scnearios
     printf("ciphertex: ");
 
-    for (int i = 0; i < strlen(plaintext))
-
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        if (isupper(plaintext[i]))
+        {
+            int letter = plaintext[i] - 65;
+            printf("%c", key[letter]);
+        }
+        else if (islower(plaintext[i]))
+        {
+            int letter = plaintext[i] - 97;
+            printf("%c", key[letter] + 32);
+            //above i added 32 to make sure I maintain the original case of the cyphertext, since the key is all uppercase
+        }
+        else
+        {
+            printf("%c", key[i]);
+        }
+    }
 }
