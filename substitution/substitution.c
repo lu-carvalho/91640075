@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int main (int argc, string agrv[])
+int main (int argc, string argv[])
 {
     //make sure the user is inputing only one command line argument
     if (argc != 2)
