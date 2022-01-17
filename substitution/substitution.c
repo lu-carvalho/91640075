@@ -43,10 +43,18 @@ int main (int argv, string agrv[])
     string plaintext = get_string("plaintext:");
 
     //convert plaintext into cyphertext
+    //begin by converting all aphabets to uppercase
 
-    key == toupper(key);
-    
+    for (int i = 0; i < strlen(key); i++)
+    {
+        if (islower(key[i]))
+        {
+            key[i] = key[i] - 32;
+        }
+    }
+    //print the ciphertext considering three possible scnearios
+    printf("ciphertex: ");
 
-
+    for (int i = 0; i < strlen)
 
 }
