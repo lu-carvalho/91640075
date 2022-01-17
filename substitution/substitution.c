@@ -55,6 +55,6 @@ int main (int argv, string agrv[])
     //print the ciphertext considering three possible scnearios
     printf("ciphertex: ");
 
-    for (int i = 0; i < strlen)
+    for (int i = 0; i < strlen(plaintext))
 
 }
