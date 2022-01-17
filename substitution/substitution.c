@@ -68,9 +68,7 @@ int main (int argv, string agrv[])
             printf("%c", key[letter] + 32);
             //above i added 32 to make sure I maintain the original case of the cyphertext, since the key is all uppercase
         }
-        else
-        {
-            printf("%c", key[i]);
-        }
+        else printf("%c", plaintext[i]);
     }
+    printf("\n");
 }
