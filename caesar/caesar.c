@@ -36,12 +36,12 @@ int main(int argc, string argv[])
     {
         if (isupper(plaintext[i]))
         {
-            printf("%c", (((plaintext[i] - 65) + k) %26) + 65);
+            printf("%c", (((plaintext[i] - 65) + k) % 26) + 65);
         }
 
         else if (islower(plaintext[i]))
         {
-            printf("%c", (((plaintext[i] - 97) + k) %26) + 97);
+            printf("%c", (((plaintext[i] - 97) + k) % 26) + 97);
         }
 
         else
