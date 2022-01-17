@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     //the program now asks the user to prompt the plaintext
     string plaintext = get_string("plaintext:  ");
 
-    //the program calculates the cyphertext, considering if the character is upper or lowercase
+    //the program calculates the cyphertext, considering if it is a carachter and if the character is upper or lowercase, and gives it back
     int k = atoi(key);
     printf("ciphertext: ");
 
@@ -50,9 +50,4 @@ int main(int argc, string argv[])
         }
     }
     printf("\n");
-
-
-
-    //the program gives back to the user the cyphertext
-    //printf("cyphertext: %s", ct);
 }
