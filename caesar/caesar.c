@@ -23,9 +23,9 @@ int main(int argc, string argv[])
             return 1;
         }
     }
-    printf("success, key is %s\n", k);
+
     //the program now asks the user to prompt the plaintext
-    //string pt = get_string("plaintext:  ");
+    string pt = get_string("plaintext:  ");
 
     //the program calculates the cyphertext
 
