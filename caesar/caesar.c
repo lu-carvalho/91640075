@@ -16,7 +16,10 @@ int main(int argc, string argv[])
     string k = argv[1];
     for (int i = 0; i < strlen(k); i++)
     {
-        if (argv[i] != )
+        if (argv[i] < 1 || agrv[i] > 26)
+        {
+            printf("Key")
+        }
     }
     //if the user prompts a non valid key, the program should remind it how to use the program
     //the program now asks the user to prompt the plaintext
