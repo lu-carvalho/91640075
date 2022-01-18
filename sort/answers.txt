@@ -1,6 +1,6 @@
-sort1 uses: TODO
+sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: Bubble sort has the smallest Big Omega 
 
 sort2 uses: TODO
 
