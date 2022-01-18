@@ -1,10 +1,10 @@
-sort1 uses: Bubble sort
+sort1 uses: Bubble Sort
 
-How do you know?: Bubble sort has the smallest Big Omega 
+How do you know?: Bubble sort has Ω(n), which means that if the list is already sorted, it will be the fastest one to realize that. Testing how much time it took for the three options to sort the sorted lists, sort1 beat sort2 and sort3 everytime.
 
-sort2 uses: TODO
+sort2 uses: Merged Sort
 
-How do you know?: TODO
+How do you know?: Merged sort has O(n log n), which menas that it has the ability to sort lists faster than the other 
 
 sort3 uses: TODO
 
