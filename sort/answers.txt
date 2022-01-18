@@ -4,8 +4,8 @@ How do you know?: Bubble sort has Ω(n), which means that if the list is already
 
 sort2 uses: Merged Sort
 
-How do you know?: Merged sort has O(n log n), which menas that it has the ability to sort lists faster than the other 
+How do you know?: Merged sort has O(n log n), which is the smallest between the three types of sort presented. The only kind of file in which sort2 was slower than sort1 was in the already sorted ones, which makes sense consideraing information given above and the fact that Merged Sort is Θ(n log n), which is longer than Bubble sort's omega.
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Considering the proximity of the Big O of selection sort and bubble sort, the best way to know that selection sort is sort3 was by exclusion. So, considering the above reasons, sort3 can only be selection sort.
