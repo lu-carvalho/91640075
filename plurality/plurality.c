@@ -72,7 +72,7 @@ bool vote(string name)
         if(strcmp(candidates[i].name, name) == 0)
         {
             candidates[i].votes++;
-            return true
+            return true;
         }
     }
     return false;
@@ -82,7 +82,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int maximum_vote == 0;
+    int maximum_vote = 0;
 
     for (int i = 0; i < candidate_count; i++)
     {
