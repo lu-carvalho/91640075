@@ -69,7 +69,7 @@ bool vote(string name)
     // TODO: the function will compare if the given name matches the ones addressed to the candidates and, if it does, it will add a vote to them.
     for (int i = 0; i < candidate_count; i++)
     {
-        if(strcmp(candidates[i].name, name) == 0)
+        if (strcmp(candidates[i].name, name) == 0)
         {
             candidates[i].votes++;
             return true;
@@ -94,7 +94,7 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes == maximum_vote)
+        if (candidates[i].votes == maximum_vote)
         {
             printf("%s\n", candidates[i].name);
         }
