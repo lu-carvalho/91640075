@@ -202,12 +202,16 @@ bool is_tie(int min)
             counter++
         }
     }
+    if (eliminate == counter)
+    {
+        return true;
+    }
     return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    // TODO
+    
     return;
 }
