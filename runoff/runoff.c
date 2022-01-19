@@ -127,7 +127,8 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
+    name = get_string(")
+
     return false;
 }
 
