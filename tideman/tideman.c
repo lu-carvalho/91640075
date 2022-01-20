@@ -102,7 +102,7 @@ bool vote(int rank, string name, int ranks[])
     int found_index = -1;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates[i].name, name) == 0)
+        if (strcmp(name, candidates[i]) == 0)
         {
             found_index = i;
             break;
