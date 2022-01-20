@@ -105,7 +105,7 @@ bool vote(int rank, string name, int ranks[])
         if (strcmp(candidates[i].name, name) == 0)
         {
             found_index = i;
-            return true;
+            break;
         }
     }
     return false;
