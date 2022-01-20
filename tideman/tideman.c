@@ -108,7 +108,15 @@ bool vote(int rank, string name, int ranks[])
             break;
         }
     }
-    return false;
+
+    if (found_index == -1)
+    {
+        return false;
+    }
+    else if (ranks[rank] == found_index);
+    {
+        return true;
+    }
 }
 
 // Update preferences given one voter's ranks
