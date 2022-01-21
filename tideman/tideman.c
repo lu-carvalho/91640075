@@ -141,6 +141,8 @@ void add_pairs(void)
         {
             int candidate_i = preferences[row][column];
             int candidate_j = preferences[column][row];
+
+            pair p;
             if (candidate_i > candidate_j)
             {
                 p.winner = row;
@@ -152,7 +154,8 @@ void add_pairs(void)
                 p.loser = row;
             }
 
-            pairs[pair_count++] = 
+            pairs[pair_count] = p;
+            pair_count++;
         }
     }
     return;
@@ -161,7 +164,7 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    // TODO
+    
     return;
 }
 
