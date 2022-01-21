@@ -162,9 +162,9 @@ void add_pairs(void)
 }
 
 // Sort pairs in decreasing order by strength of victory
+//I gave up here. 
 void sort_pairs(void)
 {
-    
     return;
 }
 
