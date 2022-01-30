@@ -36,10 +36,11 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     int arr[44];
     fread(arr, sizeof(uint8_t), 44, output);
+    fwrite(arr, sizeof(unit8_t), 44, output);
 
     // TODO: Read samples from input file and write updated data to output file
 
-    
+
 
     // Close files
     fclose(input);
