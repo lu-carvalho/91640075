@@ -4,7 +4,14 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     //calculate the average channel values of the pixel
-    for (int i = 0, )
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)/3;
+            
+        }
+    }
     return;
 }
 
