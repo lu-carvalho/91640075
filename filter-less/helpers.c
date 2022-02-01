@@ -87,7 +87,93 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            int sumblue;
+            int sumgreen;
+            int sumred;
+            float counter;
+
+            sumblue = sumgreen = sumred = counter = 0;
+
+            //right corners
+            if (i >= 0 && j >= 0)
+            {
+                sumred += temp[i][j].rgbtRed;
+                sumgreen += temp[i][j].rgbtGreen;
+                sumblue += temp[i][j].rgbtBlue;
+                counter++;
+            }
+
+            if (i - 1 >= 0 && j - 1 >= 0)
+            {
+                sumred += temp[i-1][j-1].rgbtRed;
+                sumgreen += temp[i-1][j-1].rgbtGreen;
+                sumblue += temp[i-1][j-1].rgbtBlue;
+                counter++;
+            }
+
+            //left corners
+            if (i >= 0 && j - 1 >= 0)
+            {
+                sumred += temp[i][j-1].rgbtRed;
+                sumgreen += temp[i][j-1].rgbtGreen;
+                sumblue += temp[i][j-1].rgbtBlue;
+                counter++;
+            }
+            if (i - 1 >= 0 && j >= 0)
+            {
+                sumred += temp[i-1][j].rgbtRed;
+                sumgreen += temp[i-1][j].rgbtGreen;
+                sumblue += temp[i-1][j].rgbtBlue;
+                counter++;
+            }
+
+            //now the edges
+            //bottom
+            if ((i >= 0 && j + 1 >= 0) && (i >= 0 && j + 1 < width))
+            {
+                sumred += temp[i][j+1].rgbtRed;
+                sumgreen += temp[i][j+1].rgbtGreen;
+                sumblue += temp[i][j+1].rgbtBlue;
+                counter++;
+            }
+            //top
+            if ((i - 1 >= 0 && j + 1 >= 0) && (i - 1 >= 0 && j + 1 < width))
+            {
+                sumred += temp[i-1][j+1].rgbtRed;
+                sumgreen += temp[i-1][j+1].rgbtGreen;
+                sumblue += temp[i-1][j+1].rgbtBlue;
+                counter++;
+            }
+            //left
+            if ((i + 1 >= 0 && j >= 0) && (i + 1 < height && j >= 0))
+            {
+                sumred += temp[i+1][j].rgbtRed;
+                sumgreen += temp[i+1][j].rgbtGreen;
+                sumblue += temp[i+1][j].rgbtBlue;
+                counter++;
+            }
+            //right
+            if ((i + 1 >= 0 && j - 1 >= 0) && (i + 1 < height && j - 1 >= 0))
+            {
+                sumred += temp[i+1][j-1].rgbtRed;
+                sumgreen += temp[i+1][j-1].rgbtGreen;
+                sumblue += temp[i+1][j-1].rgbtBlue;
+                counter++;
+            }
+
+            //last but not least, middle pixels
+            if ((i + 1 >= 0 && j + 1 >= 0) && (i + 1 < height && j + 1 < width))
+            {
+                sumred += temp[i+1][j+1].rgbtRed;
+                sumgreen += temp[i+1][j+1].rgbtGreen;
+                sumblue += temp[i+1][j+1].rgbtBlue;
+                counter++;
+            }
             
+            //average colour
+            image[i][j].rgbtRed = round(sum_red / counter);
+            image[i][j].rgbtGreen = round(sum_green / counter);
+            image[i][j].rgbtBlue = round(sum_blue / counter);
         }
     }
     return;
