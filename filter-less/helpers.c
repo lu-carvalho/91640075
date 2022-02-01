@@ -3,6 +3,8 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    //calculate the average channel values of the pixel
+    for (int i = 0, )
     return;
 }
 
