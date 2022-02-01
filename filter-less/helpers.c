@@ -14,7 +14,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             int blue = image[i][j].rgbtBlue;
             int green = image[i][j].rgbtGreen;
 
-            int avg = round(((float)red + (float)blue + (float)green)/3);
+            int avg = round(((float)red + (float)blue + (float)green) / 3);
 
             image[i][j].rgbtRed = image[i][j].rgbtBlue = image[i][j].rgbtGreen = avg;
         }
@@ -59,7 +59,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < (width/2) ; j++)
+        for (int j = 0; j < (width / 2) ; j++)
         {
             RGBTRIPLE temp = image[i][j];
 
@@ -105,25 +105,25 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             if (i - 1 >= 0 && j - 1 >= 0)
             {
-                sumred += temp[i-1][j-1].rgbtRed;
-                sumgreen += temp[i-1][j-1].rgbtGreen;
-                sumblue += temp[i-1][j-1].rgbtBlue;
+                sumred += temp[i - 1][j - 1].rgbtRed;
+                sumgreen += temp[i - 1][j - 1].rgbtGreen;
+                sumblue += temp[i - 1][j - 1].rgbtBlue;
                 counter++;
             }
 
             //left corners
             if (i >= 0 && j - 1 >= 0)
             {
-                sumred += temp[i][j-1].rgbtRed;
-                sumgreen += temp[i][j-1].rgbtGreen;
-                sumblue += temp[i][j-1].rgbtBlue;
+                sumred += temp[i][j - 1].rgbtRed;
+                sumgreen += temp[i][j - 1].rgbtGreen;
+                sumblue += temp[i][j - 1].rgbtBlue;
                 counter++;
             }
             if (i - 1 >= 0 && j >= 0)
             {
-                sumred += temp[i-1][j].rgbtRed;
-                sumgreen += temp[i-1][j].rgbtGreen;
-                sumblue += temp[i-1][j].rgbtBlue;
+                sumred += temp[i - 1][j].rgbtRed;
+                sumgreen += temp[i - 1][j].rgbtGreen;
+                sumblue += temp[i - 1][j].rgbtBlue;
                 counter++;
             }
 
@@ -131,42 +131,42 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //bottom
             if ((i >= 0 && j + 1 >= 0) && (i >= 0 && j + 1 < width))
             {
-                sumred += temp[i][j+1].rgbtRed;
-                sumgreen += temp[i][j+1].rgbtGreen;
-                sumblue += temp[i][j+1].rgbtBlue;
+                sumred += temp[i][j + 1].rgbtRed;
+                sumgreen += temp[i][j + 1].rgbtGreen;
+                sumblue += temp[i][j + 1].rgbtBlue;
                 counter++;
             }
             //top
             if ((i - 1 >= 0 && j + 1 >= 0) && (i - 1 >= 0 && j + 1 < width))
             {
-                sumred += temp[i-1][j+1].rgbtRed;
-                sumgreen += temp[i-1][j+1].rgbtGreen;
-                sumblue += temp[i-1][j+1].rgbtBlue;
+                sumred += temp[i - 1][j + 1].rgbtRed;
+                sumgreen += temp[i - 1][j + 1].rgbtGreen;
+                sumblue += temp[i - 1][j + 1].rgbtBlue;
                 counter++;
             }
             //left
             if ((i + 1 >= 0 && j >= 0) && (i + 1 < height && j >= 0))
             {
-                sumred += temp[i+1][j].rgbtRed;
-                sumgreen += temp[i+1][j].rgbtGreen;
-                sumblue += temp[i+1][j].rgbtBlue;
+                sumred += temp[i + 1][j].rgbtRed;
+                sumgreen += temp[i + 1][j].rgbtGreen;
+                sumblue += temp[i + 1][j].rgbtBlue;
                 counter++;
             }
             //right
             if ((i + 1 >= 0 && j - 1 >= 0) && (i + 1 < height && j - 1 >= 0))
             {
-                sumred += temp[i+1][j-1].rgbtRed;
-                sumgreen += temp[i+1][j-1].rgbtGreen;
-                sumblue += temp[i+1][j-1].rgbtBlue;
+                sumred += temp[i + 1][j - 1].rgbtRed;
+                sumgreen += temp[i + 1][j - 1].rgbtGreen;
+                sumblue += temp[i + 1][j - 1].rgbtBlue;
                 counter++;
             }
 
             //last but not least, middle pixels
             if ((i + 1 >= 0 && j + 1 >= 0) && (i + 1 < height && j + 1 < width))
             {
-                sumred += temp[i+1][j+1].rgbtRed;
-                sumgreen += temp[i+1][j+1].rgbtGreen;
-                sumblue += temp[i+1][j+1].rgbtBlue;
+                sumred += temp[i + 1][j + 1].rgbtRed;
+                sumgreen += temp[i + 1][j + 1].rgbtGreen;
+                sumblue += temp[i + 1][j + 1].rgbtBlue;
                 counter++;
             }
 
