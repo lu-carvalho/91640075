@@ -15,7 +15,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
             //set the channel values to the average
             image[i][j].rgbtRed = average;
-            image[i][j].regbtGreen = average;
+            image[i][j].rgbtGreen = average;
             image[i][j].rgbtBlue = average;
         }
     }
