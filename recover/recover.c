@@ -6,12 +6,11 @@ const int JPEG_SIZE = 512
 
 int main(int argc, char *argv[])
 {
- FILE *f = fopen("card.raw", "r");
+ FILE*f = fopen("card.raw", "r");
 
- int i =0
- int jpegs[i];
+ int jpegs[JPEG_SIZE];
 
- fread(jpegs; JPEG_SIZE; 1; FILE *f);
+ fread(&arr, JPEG_SIZE, 1, );
 
 
 
