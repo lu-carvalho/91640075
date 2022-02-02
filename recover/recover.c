@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cs50.h>
+#include <stdint.h>
 
 const int JPEG_SIZE = 512
 
