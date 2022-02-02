@@ -15,16 +15,19 @@ int main(int argc, char *argv[])
     }
 
     //open the memory card file
-    FILE *mc = fopen(argv[1], "r");
-    if (argv[1] == NULL)
+    char *input_file = argv[1];
+    FILE *input_pointer = fopen(input_file, "r");
+
+    if (input_pointer == NULL)
     {
         printf("forensic image cannot be opened for reading\n");
         return 1;
     }
 
-    int i = 0;
-    int fc = 0;
-    int files[i];
+    BYTE buffer[512];
+    int jpg_count = 0;
+    FILE *jpg_pointer = NULL;
+    char jpg_name[8];
 
 
     fread(files, sizeof(BYTE), 512, image);
