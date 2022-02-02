@@ -7,13 +7,20 @@ typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
+    //require correct usage from user
     if (argc != 2)
     {
         printf("usage: ./recover IMAGE\n");
         return 1;
     }
 
-    FILE *image = fopen(argv[1], "r");
+    //open the memory card file
+    FILE *mc = fopen(argv[1], "r");
+    if (!mc)
+    {
+        printf("forensic image cannot be opened for reading\n");
+        return 1;
+    }
 
     int i = 0;
     int files[i];
