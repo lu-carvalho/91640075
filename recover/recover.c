@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 
     int i = 0;
     int files[i];
+    
 
     fread(files, sizeof(BYTE), 512, image);
 
