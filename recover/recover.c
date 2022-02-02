@@ -19,5 +19,6 @@ int main(int argc, char *argv[])
     int files[i];
 
     fread(files, sizeof(BYTE), 512, image);
+    
 
 }
