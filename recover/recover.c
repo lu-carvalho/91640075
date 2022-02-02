@@ -13,15 +13,4 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
- FILE *files = fopen(argv[1], "r");
-
-
- int jpegs[JPEG_SIZE];
-
- fread(&arr, JPEG_SIZE, 1, );
-
-
-
-
 }
