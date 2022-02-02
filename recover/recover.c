@@ -3,11 +3,19 @@
 #include <cs50.h>
 #include <stdint.h>
 
-const int JPEG_SIZE = 512
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
- FILE *file = fopen("card.raw", "r");
+    if (argc != 2)
+    {
+        printf("usage ./recover IMAGE\n");
+        return 1;
+    }
+
+
+ FILE *files = fopen(argv[1], "r");
+
 
  int jpegs[JPEG_SIZE];
 
