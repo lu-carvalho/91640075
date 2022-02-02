@@ -29,9 +29,15 @@ int main(int argc, char *argv[])
     FILE *jpg_pointer = NULL;
     char jpg_name[8];
 
-
+    //read until the end of the file: until argv changes to the third element (2)
     while(fread(&buffer, 512, 1, input_pointer) == 1);
-
+    {
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer [2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            jpg_count++;
+            
+        }
+    }
     if (files[0] == 0xff && files[1] == 0xd8 && (files[3] & 0xf0) == 0xe0)
     {
         jpg_count++;
