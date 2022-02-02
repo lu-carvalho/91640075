@@ -7,7 +7,7 @@ const int JPEG_SIZE = 512
 
 int main(int argc, char *argv[])
 {
- FILE*f = fopen("card.raw", "r");
+ FILE *file = fopen("card.raw", "r");
 
  int jpegs[JPEG_SIZE];
 
