@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     char jpg_name[8];
 
     //read until the end of the file: until argv changes to the third element (2)
-    while(fread(&buffer, 512, 1, input_pointer) == 1);
+    while(fread(&buffer, 512, 1, input_pointer) == 1)
     {
         //try to find a JPEG file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer [2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -41,8 +41,8 @@ int main(int argc, char *argv[])
                 fclose(jpg_pointer);
             }
 
-            sprintf(filename, "%03i.jpg", jpg_count);
-            jpg_pointer = fopen(filename, "w");
+            sprintf(jpg_name, "%03i.jpg", jpg_count);
+            jpg_pointer = fopen(jpg_name, "w");
             jpg_count++;
         }
 
