@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 
     if (files[0] == 0xff && files[1] == 0xd8 && (files[3] & 0xf0) == 0xe0)
     {
+        jpg_count++;
         if (fc = 0)
         {
             FILE *image1 = fopen(files[i], );
