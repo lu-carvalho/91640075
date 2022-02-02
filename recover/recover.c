@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
     //open the memory card file
     FILE *mc = fopen(argv[1], "r");
-    if (!mc)
+    if (argv[1] == NULL)
     {
         printf("forensic image cannot be opened for reading\n");
         return 1;
