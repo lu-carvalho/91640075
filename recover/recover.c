@@ -23,14 +23,30 @@ int main(int argc, char *argv[])
     }
 
     int i = 0;
+    int fc = 0;
     int files[i];
-    
+
 
     fread(files, sizeof(BYTE), 512, image);
 
     if (files[0] == 0xff && files[1] == 0xd8 && (files[3] & 0xf0) == 0xe0)
     {
-        FILE *image1 = fopen(files[i], )
+        if (fc = 0)
+        {
+            FILE *image1 = fopen(files[i], );
+        }
+
+        else
+        {
+            fclose(image1);
+            //open new file
+        }
+
+    }
+
+    else
+    {
+        frwite until files[0] == 0xff
     }
 
 }
