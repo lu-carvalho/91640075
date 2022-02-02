@@ -32,31 +32,19 @@ int main(int argc, char *argv[])
     //read until the end of the file: until argv changes to the third element (2)
     while(fread(&buffer, 512, 1, input_pointer) == 1);
     {
+        //try to find a JPEG file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer [2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+            //if it is not the first in the memory card:
+            if(!(jpg_count == 0))
+            {
+                fclose(jpg_pointer);
+            }
+
+            sprintf(filename, "%03i.jpg", jpg_count);
+            jpg_pointer = fopen(filename, "w");
             jpg_count++;
-            
+
         }
     }
-    if (files[0] == 0xff && files[1] == 0xd8 && (files[3] & 0xf0) == 0xe0)
-    {
-        jpg_count++;
-        if (fc = 0)
-        {
-            FILE *image1 = fopen(files[i], );
-        }
-
-        else
-        {
-            fclose(image1);
-            //open new file
-        }
-
-    }
-
-    else
-    {
-        frwite until files[0] == 0xff
-    }
-
 }
