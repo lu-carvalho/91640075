@@ -44,7 +44,16 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", jpg_count);
             jpg_pointer = fopen(filename, "w");
             jpg_count++;
-
         }
+
+        if (!(jpg_count == 0))
+        {
+            fwrite(&buffer, 512, 1, jpg_pointer);
+        }
+
+        fclose(input_pointer);
+        fclose(jpg_pointer);
+
+        return 0;
     }
 }
