@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     char jpg_name[8];
 
 
-    fread(files, sizeof(BYTE), 512, image);
+    while(fread(&buffer, 512, 1, input_pointer) == 1);
 
     if (files[0] == 0xff && files[1] == 0xd8 && (files[3] & 0xf0) == 0xe0)
     {
