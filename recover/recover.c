@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     }
 
     //open the memory card file
+    else {
     char *input_file = argv[1];
     FILE *input_pointer = fopen(input_file, "r");
 
@@ -56,4 +57,4 @@ int main(int argc, char *argv[])
 
         return 0;
     }
-}
+}}
