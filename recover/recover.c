@@ -15,15 +15,16 @@ int main(int argc, char *argv[])
     }
 
     //open the memory card file
-    else {
-    char *input_file = argv[1];
-    FILE *input_pointer = fopen(input_file, "r");
-
-    if (input_pointer == NULL)
+    else
     {
-        printf("forensic image cannot be opened for reading\n");
-        return 1;
-    }
+        char *input_file = argv[1];
+        FILE *input_pointer = fopen(input_file, "r");
+
+        if (input_pointer == NULL)
+        {
+            printf("forensic image cannot be opened for reading\n");
+            return 1;
+        }
 
     BYTE buffer[512];
     int jpg_count = 0;
@@ -57,4 +58,4 @@ int main(int argc, char *argv[])
 
         return 0;
     }
-}}
+}
