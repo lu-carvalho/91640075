@@ -26,34 +26,35 @@ int main(int argc, char *argv[])
             return 1;
         }
 
-    BYTE buffer[512];
-    int jpg_count = 0;
-    FILE *jpg_pointer = NULL;
-    char jpg_name[8];
+        BYTE buffer[512];
+        int jpg_count = 0;
+        FILE *jpg_pointer = NULL;
+        char jpg_name[8];
 
-    //read until the end of the file: until argv changes to the third element (2)
-    while(fread(&buffer, 512, 1, input_pointer) == 1)
-    {
-        //try to find a JPEG file
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer [2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        //read until the end of the file: until argv changes to the third element (2)
+        while (fread(&buffer, 512, 1, input_pointer) == 1)
         {
-            //if it is not the first in the memory card:
-            if(!(jpg_count == 0))
+            //try to find a JPEG file
+            if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer [2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
-                fclose(jpg_pointer);
+                //if it is not the first in the memory card:
+                if (!(jpg_count == 0))
+                {
+                    fclose(jpg_pointer);
+                }
+                //properly name the files 
+                sprintf(jpg_name, "%03i.jpg", jpg_count);
+                jpg_pointer = fopen(jpg_name, "w");
+                jpg_count++;
             }
 
-            sprintf(jpg_name, "%03i.jpg", jpg_count);
-            jpg_pointer = fopen(jpg_name, "w");
-            jpg_count++;
+            if (!(jpg_count == 0))
+            {
+                fwrite(&buffer, 512, 1, jpg_pointer);
+            }
         }
 
-        if (!(jpg_count == 0))
-        {
-            fwrite(&buffer, 512, 1, jpg_pointer);
-        }
-    }
-
+        //close all the files
         fclose(input_pointer);
         fclose(jpg_pointer);
 
