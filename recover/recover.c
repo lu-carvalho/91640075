@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
         {
             fwrite(&buffer, 512, 1, jpg_pointer);
         }
+    }
 
         fclose(input_pointer);
         fclose(jpg_pointer);
