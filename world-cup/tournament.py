@@ -17,7 +17,7 @@ def main():
     teams = []
     # TODO: Read teams into memory from file
     filename = sys.argv[1]
-    with open (filename) as file:
+    with open(filename) as file:
         reader = csv.DictReader(file)
         for team in reader:
             # Square brackets allows me to access the value for a particular key inside of a dictionary
@@ -65,6 +65,7 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
     return teams[0]["team"]
+
 
 if __name__ == "__main__":
     main()
