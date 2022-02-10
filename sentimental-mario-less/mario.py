@@ -8,5 +8,5 @@ while True:
 for i in range(height):
 
     print(" "*(height-1), end="")
-    print("#" * (height-1))
+    print("#" * (height-2))
     height = height - 1
