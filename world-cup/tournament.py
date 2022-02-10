@@ -22,10 +22,11 @@ def main():
         for team in reader:
             # Square brackets allows me to access the value for a particular key inside of a dictionary
             team["rating"] = int(team["rating"])
-            teams.append(team) 
+            teams.append(team)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
+    
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
