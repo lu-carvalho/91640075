@@ -8,6 +8,6 @@ while True:
 for i in range(height):
     for s in range(height - 1 - i):
         print(" ", end="")
-    for h in range(height-1-s):
+    for h in range(height-s-1):
         print("#", end="")
     print()
