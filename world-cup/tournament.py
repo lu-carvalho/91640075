@@ -20,7 +20,9 @@ def main():
     with open (filename) as file:
         reader = csv.DictReader(file)
         for team in reader:
-            team["rating"] = 
+            # Square brackets allows me to access the value for a particular key inside of a dictionary
+            team["rating"] = int(team["rating"])
+            teams.append(team) 
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
