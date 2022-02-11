@@ -8,22 +8,22 @@ while True:
     change_dol = get_float("Change owed: ")
     if change_dol > 0:
         break
-
+# switch from dollars to cents
 change = round(int(change_dol * 100))
 
 # spits out the minimum number of coins with which said change can be made
 while change > 0:
-    while change > 0.25:
-        change -= 0.25
+    while change >= 25:
+        change -= 25
         coins += 1
-    while change > 0.10:
-        change -= 0.10
+    while change >= 10:
+        change -= 10
         coins += 1
-    while change > 0.05:
-        change -= 0.05
+    while change >= 5:
+        change -= 5
         coins += 1
-    while change > 0.01:
-        change -= 0.01
+    while change >= 1:
+        change -= 11
         coins += 1
 print(coins)
 
