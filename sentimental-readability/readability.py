@@ -10,4 +10,3 @@ while True:
             if(text[i].isalpha()):
                 characteres += 1
             elif(text[i])
-            
