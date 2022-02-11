@@ -1,8 +1,9 @@
-# forces the user to input a valid answer
+from cs50 import get_int
 
+# forces the user to input a valid answer
 while True:
-    height = int(input("Height: "))
-    if (height > 0 and height < 9) or ValueError:
+    height = get_int("Height: ")
+    if height > 0 and height < 9:
         break
 
 # prints the pyramid piramid pirâmide
