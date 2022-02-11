@@ -29,6 +29,6 @@ wordf = words / 100
 lettersw = letters / wordf
 sentencesw = sentences / wordf
 
-index = 0.0588 * lettersw - 0.296 * sentencesw - 15.8
+index = round(0.0588 * lettersw - 0.296 * sentencesw - 15.8)
 
 print(index)
