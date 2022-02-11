@@ -29,6 +29,12 @@ wordf = words / 100
 lettersw = letters / wordf
 sentencesw = sentences / wordf
 
-index = round(0.0588 * lettersw - 0.296 * sentencesw - 15.8)
+index = round((0.0588 * lettersw) - (0.296 * sentencesw) - 15.8)
 
-print(index)
+# return to the user the grade of the text
+if index >= 16:
+    print("Grade 16+")
+elif index < 1:
+    print("Before Grade 1")
+else:
+    print("Grade: {}".format, index)
