@@ -31,7 +31,11 @@ def validade_card(credit_card):
         print ("IVALID")
         sys.exit(1)
 
-    if card_len % 2 == 0
+    if card_len % 2 == 0:
+        for i in range(card_len):
+            num = int(card_len[i])
+            if i % 2 == 0:
+                
 
 
 if __name__ == "__main__":
