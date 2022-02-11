@@ -6,7 +6,7 @@ import cs50
 def main():
     credit_card = get_card_number()
 
-    validade_card(credit_card)
+    validate_card(credit_card)
 
 # prompt the user for the credit card number
 
@@ -18,18 +18,19 @@ def get_card_number():
                 break
         except ValueError:
             continue
+
     return(card_num)
 
 # define a function that will validade the credit card number
 
-def validade_card(credit_card):
-
-    even, odd = 0, 0
-    card_len = len(credit_card)
+def validate_card(credit_card):
 
     if card_len != 13 or card_len != 15 or card_len != 16:
         print ("IVALID")
-        sys.exit(1)
+        sys.exit(0)
+
+    even, odd = 0, 0
+    card_len = len(credit_card)
 
     if card_len % 2 == 0:
         for i in range(card_len):
