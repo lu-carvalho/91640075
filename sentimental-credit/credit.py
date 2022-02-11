@@ -23,7 +23,15 @@ def get_card_number():
 # define a function that will validade the credit card number
 
 def validade_card(credit_card):
-    if len(credit_card) < 
+
+    even, odd = 0, 0
+    card_len = len(credit_card)
+
+    if card_len != 13 or card_len != 15 or card_len != 16:
+        print ("IVALID")
+        sys.exit(1)
+    
+
 
 if __name__ == "__main__":
     main()
