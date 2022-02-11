@@ -3,7 +3,7 @@ while True:
     height = int(input("Height: "))
     if height > 0 and height < 9:
         break
-    except ValueError
+    except ValueError:
 
 # prints the pyramid piramid pirâmide
 for i in range(height):
