@@ -13,26 +13,26 @@ while True:
 while change >= 0.25:
     change -= 0.25
     coins += 1
-    if change < 0.25:
-        break
+    #if change < 0.25:
+        #break
 
 while change >= 0.10:
     change -= 0.10
     coins += 1
-    if change < 0.10:
-        break
+    #if change < 0.10:
+        #break
 
 while change >= 0.05:
     change -= 0.05
     coins += 1
-    if change < 0.05:
-        break
+    #if change < 0.05:
+        #break
 
 while change >= 0.01:
     change -= 0.01
     coins += 1
-    if change < 0.01:
-        break
+    #if change < 0.01:
+        #break
 
 print("{}".format, coins)
 # assume that the user will input their change in dollars
