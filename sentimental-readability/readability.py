@@ -5,10 +5,10 @@ def main():
     text = get_string("Text: ")
     print(grade_level(text))
 
-# define function that will calculate the grade level
-def grade_level():
-    
+# i need to count the letters, the words and the sentences
 
+
+# after that, with the number of each of them, i need to make the calculus
 
 
 if __name__ == "__main__":
