@@ -1,11 +1,14 @@
 import sys
 import cs50
 
-def main():
-    
-
-
 # define main as the function that will use the other functions
+
+def main():
+    card_number = get_card_number()
+
+    validade_card(credit_number)
+
+
 
 # prompt the user for the credit card number
 
