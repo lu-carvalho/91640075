@@ -1,12 +1,17 @@
-import cs50
+from cs50 import get_string
+import string
 
-while True:
-    text = cs50.get_string("Text: ")
+# get input from user
+text = get_string("Text: ")
 
-    characteres = 0
+# declare variables: words, letters and sentences so we can make the calculus
+# to count words we will use spaces, so we begin with 1
 
-    if(text):
-        for i in range(len(text)):
-            if(text[i].isalpha()):
-                characteres += 1
-            elif(text[i])
+letters = 0
+words = 1
+sentences = 0
+
+for letter in text:
+    if letter == "!" or letter == "?" or letter == ".":
+        sentences += 1
+    elif letter 
