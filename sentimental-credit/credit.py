@@ -35,8 +35,40 @@ def validade_card(credit_card):
         for i in range(card_len):
             num = int(card_len[i])
             if i % 2 == 0:
-                
+                multiple = num*2
+                if multiple >= 10:
+                    even += multiple // 10
+                    even +- multiple % 10
+                else:
+                    even +- multiple
+            else:
+                odd += num
 
+    else:
+        for i in range(card_len):
+            num = int(card_len[i])
+            if i % 2 != 0:
+                multiple = num * 2
+                if multiple >= 10:
+                    even += multiple // 10
+                    even += multiple % 10
+                else:
+                    even += multiple
+            else:
+                odd += num
+    checksum = (even + odd) % 10
+
+    if checksum == 0:
+        first_digit = int(credit_card[0])
+        second_digit = int(credit_card[1])
+        if first_digit == 3 and second_digit == 4 or second_digit == 7:
+            print("AMEX")
+        if first_digit == 5 and 1 <= second_digit <= 5:
+            print("MASTERCARD")
+        if first_digit == 4:
+            print("VISA")
+        else:
+            print("INVALID")
 
 if __name__ == "__main__":
     main()
