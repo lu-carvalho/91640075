@@ -1,10 +1,15 @@
 import sys
 import cs50
 
+def main():
+    
+
+
+# define main as the function that will use the other functions
+
 # prompt the user for the credit card number
 
 # define a function that will validade the credit card number
 
-# define a function that will check the length of the credit card number
-
-# definte a function that will tell me the card type 
+if __name__ == "__main__":
+    main()
