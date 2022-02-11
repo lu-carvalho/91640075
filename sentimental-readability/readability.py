@@ -1,18 +1,12 @@
-from cs50 import get_string
+import cs50
 
-# main: gets input and gives grade back
-def main():
-    text = get_string("Text: ")
-    print(grade_level(text))
+while True:
+    text = cs50.get_string("Text: ")
 
-# i need to count the letters, the words and the sentences
-def count_letters(text):
-    for i in range(len(text)):
-        if(text[i])
+    characteres = 0
 
-
-# after that, with the number of each of them, i need to make the calculus
-
-
-if __name__ == "__main__":
-    main()
+    if(text):
+        for i in range(len(text)):
+            if(text[i].isalpha()):
+                characteres += 1
+            elif(text[i])
