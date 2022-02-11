@@ -10,26 +10,26 @@ while True:
         break
 
 # spits out the minimum number of coins with which said change can be made
-while change >= 0.25:
-    change -= 0.25
+if change >= 0.25:
+    change = change - 0.25
     coins += 1
     #if change < 0.25:
         #break
 
-while change >= 0.10:
-    change -= 0.10
+if change >= 0.10:
+    change = change - 0.10
     coins += 1
     #if change < 0.10:
         #break
 
-while change >= 0.05:
-    change -= 0.05
+if change >= 0.05:
+    change = change - 0.05
     coins += 1
     #if change < 0.05:
         #break
 
-while change >= 0.01:
-    change -= 0.01
+if change >= 0.01:
+    change = change - 0.01
     coins += 1
     #if change < 0.01:
         #break
