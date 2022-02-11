@@ -25,12 +25,12 @@ def get_card_number():
 
 def validate_card(credit_card):
 
+    even, odd = 0, 0
+    card_len = len(credit_card)
+    
     if card_len != 13 or card_len != 15 or card_len != 16:
         print ("IVALID")
         sys.exit(0)
-
-    even, odd = 0, 0
-    card_len = len(credit_card)
 
     if card_len % 2 == 0:
         for i in range(card_len):
