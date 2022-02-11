@@ -14,4 +14,9 @@ sentences = 0
 for letter in text:
     if letter == "!" or letter == "?" or letter == ".":
         sentences += 1
-    elif letter 
+    # the following avoid that other punctuation such as commas count as a letter:
+    elif letter in string.punctuation:
+        continue
+    # 
+    elif letter in string.whitespace:
+        words += 1
