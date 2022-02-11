@@ -37,4 +37,4 @@ if index >= 16:
 elif index < 1:
     print("Before Grade 1")
 else:
-    print("Grade: {}".format, index)
+    print(f"Grade: {index}")
