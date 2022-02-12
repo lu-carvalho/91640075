@@ -38,7 +38,11 @@ def main():
             strs_count[STR] = longest_sequence
 
     # TODO: Check database for matching profiles
-        
+        for person in reader:
+            name = person['name']
+
+            for STR in strs_tested:
+                if person[STR]
 
     return
 
