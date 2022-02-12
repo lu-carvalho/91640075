@@ -1,9 +1,13 @@
 // Implements a dictionary's functionality
 
-#include <ctype.h>
 #include <stdbool.h>
-
 #include "dictionary.h"
+#include <stdio.h>
+#include <cs50.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -14,7 +18,14 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 1;
+// no. of buckets in hash table
+const unsigned int N = 26;
+// initialise positive hash value using unsigned int
+unsigned int hash_value;
+// initialise (positive) hash table word count
+unsigned int word_count;
+// hash table
+node *table[N];
 
 // Hash table
 node *table[N];
