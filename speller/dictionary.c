@@ -2,6 +2,12 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <strings.h>
+#include <string.h>
+#include <stdio.h>
+#include <cs50.h>
 
 #include "dictionary.h"
 
@@ -27,7 +33,7 @@ bool check(const char *word)
     int index = hash(word);
 
     node *cursor = table[index];
-    while (curso != NULL)
+    while (cursor != NULL)
     {
         if (strcasecmp(cursor->word, word) == 0)
         {
@@ -69,8 +75,8 @@ bool load(const char *dictionary)
             return false;
         }
 
-        strcpy(n->word, word);
-        new_node->next == NULL;
+        strcpy(new_node->word, word);
+        new_node->next = NULL;
 
         int index = hash(word);
         if(table[index] == NULL)
@@ -84,7 +90,7 @@ bool load(const char *dictionary)
         }
         total_words++;
     }
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
@@ -98,5 +104,18 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for(int i = 0; i < N; i++)
+    {
+        node *head = table[i];
+        node *cursor = head;
+        node *tmp = head;
+
+        while(cursor != NULL)
+        {
+            cursor = cursor->next;
+            free(tmp);
+            tmp = cursor;
+        }
+    }
+    return true;
 }
