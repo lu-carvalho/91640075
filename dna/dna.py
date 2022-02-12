@@ -46,6 +46,11 @@ def main():
                 if int(person[STR]) != strs_count[STR]:
                     is_found = False
                     break
+            if is_found:
+                print(name)
+                sys.exit(0)
+        print("No Match")
+        
     return
 
 
