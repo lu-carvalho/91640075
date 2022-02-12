@@ -40,10 +40,12 @@ def main():
     # TODO: Check database for matching profiles
         for person in reader:
             name = person['name']
+            is_found = True
 
             for STR in strs_tested:
-                if person[STR]
-
+                if int(person[STR]) != strs_count[STR]:
+                    is_found = False
+                    break
     return
 
 
