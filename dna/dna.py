@@ -11,7 +11,6 @@ def main():
 
     # TODO: Read database file into a variable
     database = []
-    buffer = []
     with open(sys.argv[1]),"r") as csvfile:
         reader = csv.DictReader(csvfile)
         dict_list = list(reader)
