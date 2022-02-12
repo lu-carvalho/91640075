@@ -17,12 +17,25 @@ node;
 const unsigned int N = (LENGTH+1) * 'z';
 
 // Hash table
+int total_words = 0;
 node *table[N];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
     // TODO
+    int index = hash(word);
+
+    node *cursor = table[index];
+    while (curso != NULL)
+    {
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+        cursor = cursor->next;
+    }
+
     return false;
 }
 
@@ -69,8 +82,8 @@ bool load(const char *dictionary)
             new_node->next = table[index];
             table[index] = new_node;
         }
+        total_words++;
     }
-
     return false;
 }
 
@@ -78,7 +91,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return total_words;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
