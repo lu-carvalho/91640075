@@ -9,15 +9,24 @@ def main():
         print("Usage: python dna.py file.csv file.txt")
         sys.exit(1)
 
+    # TODO: Read DNA sequence file into a variable
+    dna = open(sys.argv[2], "r").read()
+
     # TODO: Read database file into a variable
     database = []
     with open(sys.argv[1]),"r") as csvfile:
         reader = csv.DictReader(csvfile)
-        dict_list = list(reader)
+        strs_tested = reader.fieldnames[1:]
+        strs_counts = {}
 
-    # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2], "r") as txtfile:
-        sequence = txtfile.read()
+        for STR in strs_tested:
+            index = 0
+            longest_sequence = 0
+
+            while index < len(dna):
+                
+
+
 
     # TODO: Find longest match of each STR in DNA sequence
     STRs = []
