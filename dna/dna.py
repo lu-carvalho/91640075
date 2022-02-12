@@ -24,7 +24,7 @@ def main():
             longest_sequence = 0
 
             while index < len(dna):
-                
+                for STR 
 
 
 
