@@ -17,7 +17,7 @@ def main():
     with open(sys.argv[1]),"r") as csvfile:
         reader = csv.DictReader(csvfile)
         strs_tested = reader.fieldnames[1:]
-        strs_counts = {}
+        strs_count = {}
 
         for STR in strs_tested:
             index = 0
@@ -30,11 +30,15 @@ def main():
                     current_sequence += 1
                     index += len(STR)
                 else:
-                    
+                    if current_sequence > longest_sequence:
+                        longest_sequence = current_sequence
+                    current_sequence = 0
                     index += 1
 
+            strs_count[STR] = longest_sequence
 
     # TODO: Check database for matching profiles
+        
 
     return
 
