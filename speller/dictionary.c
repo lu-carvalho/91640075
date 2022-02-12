@@ -20,7 +20,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = (LENGTH+1) * 'z';
+const unsigned int N = (LENGTH + 1)* 'z';
 
 // Hash table
 int total_words = 0;
@@ -50,11 +50,11 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int sum = 0;
-    for(int i = 0; i < strlen(word); i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         sum += tolower(word[i]);
     }
-    return(sum % N);
+    return (sum % N);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -79,7 +79,7 @@ bool load(const char *dictionary)
         new_node->next = NULL;
 
         int index = hash(word);
-        if(table[index] == NULL)
+        if (table[index] == NULL)
         {
             table[index] = new_node;
         }
@@ -105,13 +105,13 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for(int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         node *head = table[i];
         node *cursor = head;
         node *tmp = head;
 
-        while(cursor != NULL)
+        while (cursor != NULL)
         {
             cursor = cursor->next;
             free(tmp);
