@@ -5,7 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) =! 3:
+    if len(sys.argv) != 3:
         print("Usage: python dna.py file.csv file.txt")
         sys.exit(1)
 
@@ -14,7 +14,7 @@ def main():
 
     # TODO: Read database file into a variable & Find longest match of each STR in DNA sequence
     database = []
-    with open(sys.argv[1]),"r") as csvfile:
+    with open((sys.argv[1]),"r") as csvfile:
         reader = csv.DictReader(csvfile)
         strs_tested = reader.fieldnames[1:]
         strs_count = {}
@@ -50,7 +50,7 @@ def main():
                 print(name)
                 sys.exit(0)
         print("No Match")
-        
+
     return
 
 
