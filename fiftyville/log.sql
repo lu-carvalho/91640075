@@ -9,5 +9,5 @@ AND street = "Humphrey Street";
 --No known witnesses.
 
 -- Select the activity from the bakery at the moment the crime happened
-SELECT activity FROM bakery_security_logs
-WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 16 AND minute = 36;
+SELECT id, activity, hour, minute FROM bakery_security_logs
+WHERE year = 2021 AND month = 7 AND day = 28;
