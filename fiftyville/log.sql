@@ -8,6 +8,8 @@ AND street = "Humphrey Street";
 --witnesses who were present at the time – each of their interview transcripts mentions the bakery.Littering took place at 16:36.
 --No known witnesses.
 
--- Select the activity from the bakery at the moment the crime happened
+-- Select the activity from the bakery at the day the crime happened
 SELECT id, activity, hour, minute FROM bakery_security_logs
 WHERE year = 2021 AND month = 7 AND day = 28;
+
+--
