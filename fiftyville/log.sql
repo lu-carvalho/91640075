@@ -10,4 +10,4 @@ AND street = "Humphrey Street";
 
 -- Select the activity from the bakery at the moment the crime happened
 SELECT activity FROM bakery_security_logs
-WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute = 15;
+WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 16 AND minute = 36;
