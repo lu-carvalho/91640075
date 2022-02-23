@@ -12,4 +12,6 @@ AND street = "Humphrey Street";
 SELECT id, activity, hour, minute FROM bakery_security_logs
 WHERE year = 2021 AND month = 7 AND day = 28;
 
---
+-- the IDs 258 and 259 are suspects. I
+
+SELECT id, name, transcript FROM interviews WHERE year = 2021 AND month = 7 AND day = 28;
