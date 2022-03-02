@@ -21,7 +21,7 @@
                 let incorrects = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrects.length; i++) {
                     incorrects[i].addEventListener('click', function(){
-                        incorrects[i].style.backgroundCollor = 'red';
+                        incorrects[i].style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Incorrect';
                     })
                 }
@@ -29,13 +29,13 @@
                 //now check the input of the free response question
                 document.querySelector('#check').addEventListener('click', function(){
                     let input = document.querySelectron('input');
-                    if(input.value === 'Mean Girls' || 'mean girls' || 'Mean girls'){
+                    if(input.value === 'Mean Girls'){
                         input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'Correct!';
                     }
                     else {
                         input.style.backgroundColor = 'red';
-                        document.querySelector('feedback2').innterHTML = 'Incorrect';
+                        document.querySelector('feedback2').innerHTML = 'Incorrect';
                     }
                 });
             });
