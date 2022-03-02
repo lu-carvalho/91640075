@@ -4,9 +4,41 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
-        <title>Not Trivia!</title>
+        <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            //wait until the content is loaded (DOM) and only then run the script:
+            document.addEventListener('DOMContentLoaded', function (){
+
+                //change the collor to green when the correct answer is selected:
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', functcion() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                //same idea but for all the others that are incorrect
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.backgroundCollor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    })
+                }
+
+                //now check the input of the free response question
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelectron('input');
+                    if(input.value === 'Mean Girls' || 'mean girls' || 'Mean girls'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('feedback2').innterHTML = 'Incorrect';
+                    }
+                });
+            });
         </script>
     </head>
     <body>
@@ -18,15 +50,27 @@
             <div class="section">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
+ <!-- TODO: Add multiple choice question here -->
                 <h3>What is the capital of Brazil?<h3>
-                <button type="button" class="button">São Paulo</button>
-                <!-- TODO: Add multiple choice question here -->
+                <button class="incorrect">São Paulo</button>
+                <button class="incorrect">Rio de Janeiro</button>
+                <button class="correct">Brasília</button>
+                <button class="incorrect">Brazilândia</button>
+
+                <p id="feedback1"></p>
+
             </div>
 
             <div class="section">
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
+                <h3>From which movie is the iconic line: "On Wednesdays we wear pink"?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+
+                <p id="feedback2"></p>
+
             </div>
         </div>
     </body>
