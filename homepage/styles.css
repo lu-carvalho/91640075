@@ -85,6 +85,24 @@
     background-color:#222f3e;
 }
 
+.todbody {
+    background-color: #6D214F;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: auto;
+    text-align: center;
+}
+
+.todheader {
+    background-color: #6D214F;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
 /* never have i ever */
 
 .nhiebutton {
