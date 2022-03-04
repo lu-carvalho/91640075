@@ -41,16 +41,17 @@
 .todbutton {
     z-index: 1000;
     cursor: pointer;
-    padding: 0;
-    width: 3vh;
-    height: 3vh;
-    background-color: transparent;
-    border: 2px solid #B7AEB4;
-    color: #B7AEB4;
+    padding-left: 15px;
+    padding-right: 15px;
+    align: center;
+    width: 600px;
+    height: 200px;
+    background-color: #EAB543;
+    color: #fff;
     font-weight: 400;
     line-height: 1em;
     font-size: 2vh;
-    font-family: 'Mitr', sans-serif;
+    font-family: 'Francois One', sans-serif;
     font-weight: 400;
     border-radius: 20%;
     display: flex;
