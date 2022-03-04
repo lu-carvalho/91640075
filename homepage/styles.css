@@ -39,7 +39,6 @@
 
 /* truth or dare */
 .todbutton {
-    z-index: 1000;
     cursor: pointer;
     width: 200px;
     height: 50px;
@@ -61,6 +60,8 @@
 .container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
 }
 
