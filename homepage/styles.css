@@ -38,6 +38,25 @@
 }
 
 /* truth or dare */
+.todbutton {
+    z-index: 1000;
+    cursor: pointer;
+    padding: 0;
+    width: 3vh;
+    height: 3vh;
+    background-color: transparent;
+    border: 2px solid #B7AEB4;
+    color: #B7AEB4;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 2vh;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 400;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* never have i ever */
 
@@ -46,7 +65,7 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 40px;
+    padding-left: 15px;
     padding-right: 15px;
 }
 
