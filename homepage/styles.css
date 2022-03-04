@@ -37,6 +37,22 @@
     text-align: center;
 }
 
+.rulesbutton {
+    cursor: pointer;
+    width: 250px;
+    height: 70px;
+    background-color: #58B19F;
+    color: #222f3e;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Francois One', sans-serif;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
 /* truth or dare */
 .todbutton {
     cursor: pointer;
