@@ -141,6 +141,14 @@ a:link {
     text-decoration: none;
 }
 
+.absolute {
+    position: absolute;
+    bottom: 10px;
+    width: 10%;
+    border: none;
+    text-align: right;
+}
+
 .section {
     padding: 0.5rem 2rem 1rem 2rem;
 }
