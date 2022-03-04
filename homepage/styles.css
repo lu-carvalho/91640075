@@ -65,6 +65,13 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 button, input[type="submit"] {
     background-color: #d9edff;
     border: 1px solid transparent;
