@@ -165,8 +165,9 @@ h3 {
 }
 
 h4 {
-    font-family: 'Francois One', sans-serif;
+    font-family: 'Lobster', cursive;
     font-size: 42px;
+    color: white;
 }
 
 button, input[type="submit"] {
