@@ -164,6 +164,11 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 42px;
+}
+
 button, input[type="submit"] {
     background-color: #d9edff;
     border: 1px solid transparent;
