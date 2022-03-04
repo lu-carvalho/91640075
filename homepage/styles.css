@@ -43,7 +43,7 @@
     width: 250px;
     height: 70px;
     background-color: #58B19F;
-    color: #fff;
+    color: #222f3e;
     font-weight: 400;
     font-size: 30px;
     font-family: 'Francois One', sans-serif;
@@ -55,9 +55,8 @@
 }
 
 .todbutton:hover {
-    color:#fff;
-    background-color:#f368e0;
-    border-color:#0d6efd;
+    color:#58B19F;
+    background-color:#222f3e;
 }
 
 /* never have i ever */
