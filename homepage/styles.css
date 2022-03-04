@@ -35,6 +35,7 @@ body {
 h1 {
     font-family: 'Francois One', sans-serif;
     font-size: 42px;
+    text-transform: uppercase;
 }
 
 button, input[type="submit"] {
