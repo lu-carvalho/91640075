@@ -15,8 +15,16 @@ body {
     padding-right: 15px;
 }
 
-.header {
+.mainheader {
     background-color: #6D214F;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.rulesheader {
+    background-color: #B33771;
     color: #fff;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
