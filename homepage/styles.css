@@ -39,18 +39,23 @@
 
 /* truth or dare */
 .todbutton {
+    z-index: 1000;
     cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
     width: 200px;
     height: 50px;
     background-color: #58B19F;
     color: #fff;
+    font-weight: 400;
     font-size: 30px;
     font-family: 'Francois One', sans-serif;
     font-weight: 400;
     border-radius: 20%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* never have i ever */
