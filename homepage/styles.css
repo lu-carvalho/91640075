@@ -40,8 +40,8 @@
 /* truth or dare */
 .todbutton {
     cursor: pointer;
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 70px;
     background-color: #58B19F;
     color: #fff;
     font-weight: 400;
@@ -51,14 +51,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase
 }
 
 /* never have i ever */
 
 .nhiebutton {
     cursor: pointer;
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 70px;
     background-color: #ff9f43;
     color: #fff;
     font-weight: 400;
@@ -68,6 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase
 }
 
 /* common */
