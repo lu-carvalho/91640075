@@ -45,6 +45,8 @@
     background-color: #58B19F;
     color: #fff;
     font-weight: 400;
+    font-size: 30px;
+    font-family: 'Francois One', sans-serif;
     border-radius: 20%;
     display: flex;
     align-items: center;
@@ -61,6 +63,8 @@
     background-color: #ff9f43;
     color: #fff;
     font-weight: 400;
+    font-size: 30px;
+    font-family: 'Francois One', sans-serif;
     border-radius: 20%;
     display: flex;
     align-items: center;
@@ -96,7 +100,7 @@ h1 {
 
 h2 {
     font-family: 'Francois One', sans-serif;
-    font-size: 50px;
+    font-size: 30px;
     text-transform: uppercase;
     text-align: center;
 }
