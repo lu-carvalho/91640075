@@ -54,10 +54,10 @@
 }
 
 .therules {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 3px;
+    margin-right: 3px;
     margin-top: 3px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
@@ -138,6 +138,11 @@ h2 {
     font-family: 'Francois One', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
     text-align: center;
 }
 
