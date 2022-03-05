@@ -27,7 +27,7 @@ h2 {
     text-align:center;
 }
 
-#button{
+.button{
     cursor: pointer;
     width: 270px;
     height: 70px;
@@ -41,11 +41,11 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    border:none;
 }
 
-#foodbutton:hover{
-    background-color:#e55039;
-    color: #f8c291;
+.button:hover{
+    color: #000;
 
 }
 
