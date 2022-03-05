@@ -22,3 +22,23 @@ h2 {
     font-size: 30px;
     margin-top: 30px;
 }
+
+#foodbutton{
+    cursor: pointer;
+    width: 270px;
+    height: 70px;
+    background-color: #58B19F;
+    color: #222f3e;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Francois One', sans-serif;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    position: absolute;
+    left:50%;
+    margin: auto 0;
+    padding: 0;
+}
