@@ -1,6 +1,7 @@
 body {
     animation: colorchange 30s infinite;
     text-align: center;
+    display:auto;
 }
 @keyframes colorchange
 {
@@ -58,4 +59,5 @@ h2 {
 #container {
     text-align:center;
     margin-bottom:50px;
+    position:fixed;
 }
