@@ -27,12 +27,12 @@ h2 {
     cursor: pointer;
     width: 270px;
     height: 70px;
-    background-color: #fa983a;
+    background-color: #f8c291;
     color: #e55039;
     font-weight: 400;
     font-size: 30px;
     font-family: 'Viga', sans-serif;
-    border-radius: 12px;
+    border-radius: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,6 +40,6 @@ h2 {
 
 #foodbutton:hover{
     background-color:#e55039;
-    color: #fa983a;
+    color: #f8c291;
 
 }
