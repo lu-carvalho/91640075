@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-.rulesbutton {
+#rulesbutton {
     cursor: pointer;
     width: 250px;
     height: 70px;
@@ -53,7 +53,7 @@
     text-transform: uppercase;
 }
 
-.rulesbutton:hover {
+#rulesbutton:hover {
     color:#58B19F;
     background-color:#222f3e;
 }

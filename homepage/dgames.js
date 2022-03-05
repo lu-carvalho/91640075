@@ -5,3 +5,7 @@ document.getElementById("todbutton").onclick = function(){
 document.getElementById("nhiebutton").onclick = function(){
     location.href = "neverhiever.html"
 };
+
+document.getElementById("rulesbutton").onclick = function(){
+    location.href = "gamerules.html"
+};
