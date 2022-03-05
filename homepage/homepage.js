@@ -5,3 +5,7 @@ document.getElementById("page2").onclick = function(){
 document.getElementById("page3").onclick = function(){
     location.href = "favmovies.html"
 };
+
+document.getElementById("page4").onclick = function(){
+    location.href = "favsport.html"
+};
