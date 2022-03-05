@@ -1,11 +1,11 @@
 body {
-    animation: colorchange 10s infinite;
+    animation: colorchange 30s infinite;
 }
 @keyframes colorchange
 {
-  0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: blue;}
-  75%  {background: green;}
-  100% {background: red;}
+  0%   {background: #6a89cc;}
+  25%  {background: #82ccdd;}
+  50%  {background: #b8e994;}
+  75%  {background: #78e08f;}
+  100% {background: #38ada9;}
 }
