@@ -25,13 +25,17 @@ h2 {
 
 #page2 {
     text-align:center;
+    animation: colorchange 5s infinite reverse;
+}
+
+#page3{
+    animation: colorchange 7s infinite;
 }
 
 .button{
     cursor: pointer;
     width: 270px;
     height: 70px;
-    animation: colorchange 5s infinite reverse;
     color: #fff;
     font-weight: 400;
     font-size: 30px;
@@ -46,9 +50,9 @@ h2 {
 
 .button:hover{
     color: #000;
-
 }
 
 #container {
     text-align:center;
+    margin-top:30px;
 }
