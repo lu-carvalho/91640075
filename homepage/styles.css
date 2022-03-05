@@ -53,6 +53,11 @@
     text-transform: uppercase;
 }
 
+.rulesbutton:hover {
+    color:#58B19F;
+    background-color:#222f3e;
+}
+
 .therules {
     margin-left: 60px;
     margin-right: 60px;
