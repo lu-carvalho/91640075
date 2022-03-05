@@ -35,6 +35,7 @@ body {
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
+    margin-top: 30px;
 }
 
 button, input[type="submit"] {
