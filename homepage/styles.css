@@ -59,5 +59,6 @@ h2 {
 #container {
     text-align:center;
     margin-bottom:50px;
-    position:fixed;
+    position:absolute;
+    left:40%;
 }
