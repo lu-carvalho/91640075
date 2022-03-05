@@ -85,7 +85,7 @@
     text-transform: uppercase;
 }
 
-.todbutton:hover {
+#todbutton:hover {
     color:#58B19F;
     background-color:#222f3e;
 }
