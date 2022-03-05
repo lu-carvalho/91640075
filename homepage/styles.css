@@ -183,6 +183,9 @@ h4 {
 #linkgrey {
    color: #ced6e0;
   }
+#linkgrey:hover{
+    color: black;
+}
 
 button, input[type="submit"] {
     background-color: #d9edff;
