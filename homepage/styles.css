@@ -1,5 +1,6 @@
 body {
     animation: colorchange 30s infinite;
+    text-align: center;
 }
 @keyframes colorchange
 {
@@ -8,4 +9,9 @@ body {
   50%  {background: #b8e994;}
   75%  {background: #78e08f;}
   100% {background: #38ada9;}
+}
+
+h1 {
+    font-family: 'Allura', cursive;
+    font-size: 48px;
 }
