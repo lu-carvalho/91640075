@@ -41,7 +41,7 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border:none;
+    border-style:dotted;
 }
 
 .button:hover{
