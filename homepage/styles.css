@@ -52,6 +52,8 @@
     text-transform: uppercase;
     position: absolute;
     left:50%;
+    margin: auto 0;
+    padding: 0;
 }
 
 #rulesbutton:hover {
@@ -132,6 +134,7 @@
     color:#ff9f43;
     background-color:#5f27cd;
 }
+
 /* common */
 
 .container {
@@ -183,6 +186,7 @@ h4 {
 #linkgrey {
    color: #ced6e0;
   }
+
 #linkgrey:hover{
     color: black;
 }
