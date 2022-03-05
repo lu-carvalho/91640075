@@ -51,7 +51,7 @@
     justify-content: center;
     text-transform: uppercase;
     position: absolute;
-    left:40%;
+    left:50%;
 }
 
 #rulesbutton:hover {
@@ -135,12 +135,7 @@
 /* common */
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 80px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
 }
 
 :link { text-decoration: none; }
