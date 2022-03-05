@@ -1,3 +1,3 @@
-document.getElementById("foodbutton").onclick = function(){
+document.getElementById("page2").onclick = function(){
     location.href = "favfood.html"
 };

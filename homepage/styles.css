@@ -23,12 +23,16 @@ h2 {
     margin-top: 30px;
 }
 
-#foodbutton{
+#page2 {
+    text-align:center;
+}
+
+#button{
     cursor: pointer;
     width: 270px;
     height: 70px;
-    animation: colorchange 30s infinite reverse;
-    color: #e55039;
+    animation: colorchange 5s infinite reverse;
+    color: #fff;
     font-weight: 400;
     font-size: 30px;
     font-family: 'Viga', sans-serif;
