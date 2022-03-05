@@ -27,18 +27,19 @@ h2 {
     cursor: pointer;
     width: 270px;
     height: 70px;
-    background-color: #58B19F;
-    color: #222f3e;
+    background-color: #fa983a;
+    color: #e55039;
     font-weight: 400;
     font-size: 30px;
-    font-family: 'Francois One', sans-serif;
+    font-family: 'Viga', sans-serif;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
-    position: absolute;
-    left:50%;
-    margin: auto 0;
-    padding: 0;
+}
+
+#foodbutton:hover{
+    background-color:#e55039;
+    color: #fa983a;
+
 }
