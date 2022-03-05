@@ -69,7 +69,7 @@
 }
 
 /* truth or dare */
-.todbutton {
+#todbutton {
     cursor: pointer;
     width: 250px;
     height: 70px;
