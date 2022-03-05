@@ -110,7 +110,7 @@
 
 /* never have i ever */
 
-.nhiebutton {
+#nhiebutton {
     cursor: pointer;
     width: 250px;
     height: 70px;
@@ -127,7 +127,7 @@
     line-height: 1;
 }
 
-.nhiebutton:hover {
+#nhiebutton:hover {
     color:#ff9f43;
     background-color:#5f27cd;
 }
