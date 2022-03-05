@@ -39,7 +39,7 @@
 
 #rulesbutton {
     cursor: pointer;
-    width: 250px;
+    width: 270px;
     height: 70px;
     background-color: #58B19F;
     color: #222f3e;
@@ -71,7 +71,7 @@
 /* truth or dare */
 #todbutton {
     cursor: pointer;
-    width: 250px;
+    width: 270px;
     height: 70px;
     background-color: #58B19F;
     color: #222f3e;
@@ -112,7 +112,7 @@
 
 #nhiebutton {
     cursor: pointer;
-    width: 250px;
+    width: 270px;
     height: 70px;
     background-color: #ff9f43;
     color: #5f27cd;
@@ -163,7 +163,7 @@
 
 h1 {
     font-family: 'Francois One', sans-serif;
-    font-size: 42px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
