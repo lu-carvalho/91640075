@@ -137,10 +137,7 @@
     text-align: center;
 }
 
-a:link {
-    text-decoration: none !important;
-    color:inherit;
-}
+:link { text-decoration: none; }
 
 .absolute {
     position: absolute;
