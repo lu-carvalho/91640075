@@ -27,7 +27,7 @@ h2 {
     cursor: pointer;
     width: 270px;
     height: 70px;
-    background-color: #f8c291;
+    animation: colorchange 30s infinite reverse;
     color: #e55039;
     font-weight: 400;
     font-size: 30px;
@@ -45,6 +45,6 @@ h2 {
 
 }
 
-#container{
+#container {
     text-align:center;
 }
