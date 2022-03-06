@@ -24,16 +24,16 @@ h2 {
     margin-top: 30px;
 }
 
-#page2 {
-    animation: colorchange 5s infinite reverse;
-}
-
 #page3{
     animation: colorchange 7s infinite;
 }
 
 #page4{
     animation: colorchange 3s infinite reverse;
+}
+
+#page2 {
+    animation: colorchange 5s infinite reverse;
 }
 
 .button{
@@ -52,11 +52,11 @@ h2 {
     border-style:dotted;
 }
 
-.button:hover{
-    color: #000;
-}
-
 #container {
     text-align:center;
     margin-bottom:50px;
+}
+
+.button:hover{
+    color: #000;
 }
