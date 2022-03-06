@@ -50,6 +50,9 @@ h2 {
     justify-content: center;
     padding: 10px;
     border-style:dotted;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #container {
