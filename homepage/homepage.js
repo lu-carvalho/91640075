@@ -9,3 +9,7 @@ document.getElementById("page3").onclick = function(){
 document.getElementById("page4").onclick = function(){
     location.href = "favsport.html"
 };
+
+document.getElementById("page1").onclick = function(){
+    location.href = "index.html"
+};

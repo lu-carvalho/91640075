@@ -36,6 +36,10 @@ h2 {
     animation: colorchange 5s infinite reverse;
 }
 
+#page1 {
+    animation: colorchange 5s infinite reverse;
+}
+
 .button{
     cursor: pointer;
     width: 270px;
