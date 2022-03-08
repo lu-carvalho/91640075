@@ -138,7 +138,9 @@ def register():
         password = request.form.get("password")
         confirm_password = request.form.get("confirm_password")
 
-        
+        generate_password_hash
+
+
 
     else:
         #Display a form so that they can register for a new account
