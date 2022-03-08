@@ -36,6 +36,6 @@ def index():
 
         all_birthdays = db.execute("SELECT * FROM birthdays")
 
-        return render_template("index.html")
+        return render_template("index.html", all_birthdays = all_birthdays)
 
 
