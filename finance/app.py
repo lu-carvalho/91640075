@@ -117,9 +117,10 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "GET":
-
+        #Display a form so that they can register for a new account
 
     else:
+        #Once that for is submited, check for errors. If there are no errors, insert the new user into the users table and log him in
 
     """Register user"""
     return apology("TODO")
