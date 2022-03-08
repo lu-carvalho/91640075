@@ -31,7 +31,7 @@
                         {% for all_birthdays in all_birthdays %}
                             <tr>
                                 <td> {{all_birthdays.name}}
-                                <td>{{ all_birthdays.m}}
+                                <td>{{ all_birthdays.month, all_birthdays.date}}
                             </tr>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                     </tbody>
