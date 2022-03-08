@@ -7,10 +7,11 @@
 {% block main %}
     <form action="MUDAR" method="post">
         <div class="mb-3">
-            <input autocomplet="off" autofocus class="form-control mx-auto w-auto" required id="username" name="username" placeholder="username" type="text">
+            <input autocomplet="off" autofocus class="form-control mx-auto w-auto" required id="username" name="username" placeholder="Username" type="text">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password"
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
         </div>
+        <button class="btn btn-primary" type="submit">Confirm</button>
     </form>
 {% ednblock %}
