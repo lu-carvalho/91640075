@@ -117,13 +117,29 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        #Once that for is submited, check for errors. If there are no errors, insert the new user into the users table and log him in
+        #Once that for is submited, check for errors.
+
+        # do not allow blank username
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+        # do nor allow blank password
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        # password and confirmation match
+
+        elif not request.form.get("password") == request.for.get("confirm_password")
+            return apology("password and confirmation don't match", 403)
+
+        # If there are no errors, insert the new user into the users table and log him in
         username = request.form.get("username")
         password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
 
     else:
         #Display a form so that they can register for a new account
-        
+
 
     """Register user"""
     return apology("TODO")
