@@ -7,7 +7,10 @@
 {% block main %}
     <form action="MUDAR" method="post">
         <div class="mb-3">
-            <input autocomplet="off" autofocus class="form-control mx-auto w-auto" required id="username" name="username" placeholder="username" type="text"> 
+            <input autocomplet="off" autofocus class="form-control mx-auto w-auto" required id="username" name="username" placeholder="username" type="text">
+                <small id="passwordHelpInline" class="text-muted">
+                Must be 8-20 characters long.
+                </small>
         </div>
     </form>
 {% ednblock %}
