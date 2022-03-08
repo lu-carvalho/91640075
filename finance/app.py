@@ -138,9 +138,11 @@ def register():
         password = request.form.get("password")
         confirm_password = request.form.get("confirm_password")
 
-        generate_password_hash
+        hash = generate_password_hash(password)
+        #add all that information into my data base
+        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
 
-
+        return redirect("TO WHERE?")
 
     else:
         #Display a form so that they can register for a new account
