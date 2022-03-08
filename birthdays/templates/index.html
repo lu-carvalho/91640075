@@ -17,9 +17,9 @@
                 <form action="/" method ="post">
                      <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                     <input autocomplet="off" autofocus name="name" placeholder="Name" required type="text">
-                    <input autocomplet="off" autofocus name="month" placeholder="Month" required type="int">
-                    <input autocomplet="off" autofocus name="day" placeholder="Day" required type="int">
-                    <input type="submit">
+                    <input autocomplet="off" name="month" placeholder="Month" required type="number" min="1" max="12">
+                    <input autocomplet="off" name="day" placeholder="Day" required type="number" min="1" max="31">
+                    <input type="submit" value="Add Birthday">
                 </form>
             </div>
 
