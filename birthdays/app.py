@@ -33,6 +33,7 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html -- for this, we need to get access to all the peoples birthdays inside the database so i have to add logic to query the database here
+        birthdays.execute 
 
         return render_template("index.html")
 
