@@ -117,7 +117,7 @@ def quote():
             return apology("That stock doesn't exist", 403)
 
         else:
-            return redirect("/quoted")
+            return redirect("/quote/quoted")
 
     else:
         return render_template("quote.html")
