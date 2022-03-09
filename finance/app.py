@@ -57,17 +57,21 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
 
-        if not request.get.form("symbol"):
+        if not request.form.get("symbol"):
             return apology("you must input a symbol", 403)
 
         elif lookup(request.form.get("symbol")) == "None":
             return apology("That stock doesn't exist", 403)
 
-        elif request.get.form("shares") < 0:
+        elif request.form.get("shares") < 0:
             return apology("please enter a valid amount of shares")
 
+        share_price = request.form.get("")
+        amount = request.form.get("shares")
+
         else:
-            #add the stock purchase to the user's porfolio 
+            #add the stock purchase to the user's porfolio
+
 
 
 
