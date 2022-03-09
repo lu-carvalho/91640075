@@ -75,7 +75,7 @@ def buy():
         elif lookup(request.form.get("symbol")) == None:
             return apology("That stock doesn't exist")
 
-        elif int(request.form.get("shares")) < 0:
+        elif request.form.get("shares") < 0:
             return apology("please enter a valid amount of shares")
 
         result = lookup(request.form.get("symbol"))
@@ -97,7 +97,7 @@ def buy():
 
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
-            return redirect("/history")
+            return redirect("/")
 
     else:
         return render_template("buy.html")
