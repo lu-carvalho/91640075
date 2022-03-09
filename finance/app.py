@@ -117,7 +117,7 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        #Once that for is submited, check for errors.
+        #Once that form is submited, check for errors.
 
         # do not allow blank username
         if not request.form.get("username"):
