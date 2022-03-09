@@ -66,9 +66,10 @@ def buy():
         elif request.get.form("shares") < 0:
             return apology("please enter a valid amount of shares")
 
-        result = lookup(request.form.get("symbol"))
+        else:
+            #add the stock purchase to the user's porfolio 
 
-        return render_template("buy.html", invalid=True, symbol = request.form.get("symbol"))
+
 
     else:
         return render_template("buy.html")
