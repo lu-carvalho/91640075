@@ -32,7 +32,7 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 # create table and index in order to keep track of each user stock orders
-db.execute("CREATE TABLE IF NOT EXISTS orders (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, shares NUMERIC NOT NULL, price NUMERIC NOT NULL, timestamp TEXT, transaction TEXT, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES users(id))")
+db.execute("CREATE TABLE IF NOT EXISTS orders (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, shares NUMERIC NOT NULL, price NUMERIC NOT NULL, timestamp TEXT, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES users(id))")
 
 db.execute("CREATE INDEX IF NOT EXISTS orders_by_user_id_index ON orders (user_id)")
 
@@ -251,7 +251,7 @@ def sell():
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + income)
-        db.execute("INSERT INTO orders (user_id, name, price, type, transaction, symbol) VALUES (?, ?, ?, ?, ?, ?)", user_id, name, -shares, price, "sell", symbol)
+        db.execute("INSERT INTO orders (user_id, name, price, type, symbol) VALUES (?, ?, ?, ?, ?)", user_id, name, -shares, price, symbol)
         return redirect("/")
 
     else:
