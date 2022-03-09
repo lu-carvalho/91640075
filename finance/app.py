@@ -75,8 +75,9 @@ def buy():
         elif lookup(request.form.get("symbol")) == None:
             return apology("That stock doesn't exist")
 
-        
-        elif (request.form.get("shares")) < 0:
+        try:
+            shares = int(request.form.get("shares"))
+        except:
             return apology("please enter a valid amount of shares")
 
         result = lookup(request.form.get("symbol"))
@@ -84,7 +85,6 @@ def buy():
         price = result[price]
         name = result[name]
         symbol = result[symbol]
-        shares = request.form.get("shares")
         user_id = session["user_id"]
         cash = int(db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"])
         new_cash = cash - price * shares
