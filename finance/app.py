@@ -184,7 +184,7 @@ def register():
             return apology("must provide password", 403)
 
         # password and confirmation match
-        elif request.form.get("password") != request.form.get("confirm_password"):
+        elif request.form.get("password") != request.form.get("confirmation"):
             return apology("password and confirmation don't match", 403)
 
         # make sure the username is not already taken
@@ -195,7 +195,7 @@ def register():
         # If there are no errors, insert the new user into the users table and log him in
         username = request.form.get("username")
         password = request.form.get("password")
-        # i don't think this is necessary confirm_password = request.form.get("confirm_password")
+        # i don't think this is necessary confirmation = request.form.get("confirmation")
 
         hash = generate_password_hash(password)
 
