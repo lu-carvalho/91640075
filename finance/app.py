@@ -62,8 +62,8 @@ def buy():
             return apology("please enter a valid amount of shares")
 
         result = lookup(request.form.get("symbol"))
-        else:
-            return render_template("buy.html", invalid=True, symbol = request.form.get("symbol"))
+        else: 
+        return render_template("buy.html", invalid=True, symbol = request.form.get("symbol"))
 
     else:
         return render_template("buy.html")
