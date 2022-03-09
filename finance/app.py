@@ -52,7 +52,7 @@ def index():
 
 
 @app.route("/buy", methods=["GET", "POST"])
-#@login_required
+@login_required
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
@@ -74,16 +74,18 @@ def buy():
         shares = int(request.form.get("shares"))
         user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]['cash']
+        new_cash = cash - price * shares
 
-        if (cash - price * shares) < 0:
+        if new_cash < 0:
             return apology("You gonna need more cash for that")
 
         else:
-            #add the stock purchase to the user's porfolio
+            #add the stock purchase to the user's porfolio and update cash amount
             db.execute("INSERT INTO orders (user_id, symbol, shares, price) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, price)
 
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
-
+            return redirect("/history")
 
     else:
         return render_template("buy.html")
