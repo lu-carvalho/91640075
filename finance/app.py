@@ -174,6 +174,7 @@ def quoted():
 def register():
     username = request.form.get("username")
     password = request.form.get("password")
+
     if request.method == "POST":
         #Once that form is submited, check for errors.
 
@@ -198,17 +199,18 @@ def register():
 
         # i don't think this is necessary confirmation = request.form.get("confirmation")
 
-        hash = generate_password_hash(password)
+        else:
+            hash = generate_password_hash(password)
 
-        #add all that information into my data base
-        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
+            #add all that information into my data base
+            db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
 
-        # Remember which user has logged in
+            # Remember which user has logged in
 
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-        session["user_id"] = rows[0]["id"]
+            rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+            session["user_id"] = rows[0]["id"]
 
-        return redirect("/")
+            return redirect("/")
 
     else:
         #Display a form so that they can register for a new account
