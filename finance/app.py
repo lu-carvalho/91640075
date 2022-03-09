@@ -178,8 +178,8 @@ def register():
     confirmation = request.form.get("confirmation")
 
     if request.method == "POST":
-        #Once that form is submited, check for errors.
 
+        # once that form is submited, check for errors.
         # do not allow blank username
         if not request.form.get("username"):
             return apology("must provide username", 400)
