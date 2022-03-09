@@ -132,6 +132,8 @@ def register():
             return apology("password and confirmation don't match", 403)
 
         # make sure the username is not already taken
+
+
         elif len(db.execute("SELECT ? FROM users", username)) != 0:
             return apology("that username is already taken")
 
@@ -144,6 +146,9 @@ def register():
 
         #add all that information into my data base
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
 
         return redirect("/")
 
