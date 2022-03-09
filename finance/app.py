@@ -132,6 +132,7 @@ def register():
             return apology("password and confirmation don't match", 403)
 
         # TODO: make sure the username is not already taken
+        elif 
 
         # If there are no errors, insert the new user into the users table and log him in
         username = request.form.get("username")
