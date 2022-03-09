@@ -97,7 +97,7 @@ def buy():
 
         else:
             #add the stock purchase to the user's porfolio and update cash amount
-            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, price, when())
+            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, when())
 
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
