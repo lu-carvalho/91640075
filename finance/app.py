@@ -72,7 +72,7 @@ def buy():
         if not request.form.get("symbol"):
             return apology("you must input a symbol")
 
-        elif lookup(request.form.get("symbol")) == "None":
+        elif lookup(request.form.get("symbol")) == None:
             return apology("That stock doesn't exist")
 
         elif request.form.get("shares") < 0:
