@@ -128,7 +128,7 @@ def register():
             return apology("must provide password", 403)
 
         # password and confirmation match
-        elif not request.form.get("password") == request.for.get("confirm_password")
+        elif not request.form.get("password") == request.form.get("confirm_password"):
             return apology("password and confirmation don't match", 403)
 
         # TODO: make sure the username is not already taken
@@ -146,7 +146,7 @@ def register():
 
     else:
         #Display a form so that they can register for a new account
-
+        return render_template("register.html")
 
     """Register user"""
     return apology("TODO")
