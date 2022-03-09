@@ -172,26 +172,48 @@ def quoted():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    """Register user"""
-    if request.method == "GET":
-        return render_template("register.html")
-    # check username and password
+
     username = request.form.get("username")
     password = request.form.get("password")
     confirmation = request.form.get("confirmation")
-    if username == "" or len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
-        return apology("Invalid Username: Blank, or already exists")
-    if password == "" or password != confirmation:
-        return apology("Invalid Password: Blank, or does not match")
-    # Add new user to users db (includes: username and HASH of password)
-    db.execute('INSERT INTO users (username, hash) \
-            VALUES(?, ?)', username, generate_password_hash(password))
-    # Query database for username
-    rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-    # Log user in, i.e. Remember that this user has logged in
-    session["user_id"] = rows[0]["id"]
-    # Redirect user to home page
-    return redirect("/")
+
+    if request.method == "POST":
+
+        # once that form is submited, check for errors.
+        # do not allow blank username
+        if not request.form.get("username"):
+            return apology("must provide username", 400)
+
+        # make sure the username is not already taken
+        elif len(db.execute("SELECT username FROM users WHERE username = ?", username)) > 0:
+            return apology("that username is already taken")
+
+        # do nor allow blank password
+        elif not request.form.get("password"):
+            return apology("must provide password", 400)
+
+        # password and confirmation match
+        elif request.form.get("password") != request.form.get("confirmation"):
+            return apology("password and confirmation don't match", 400)
+
+        # If there are no errors, insert the new user into the users table and log him in
+
+        else:
+            hash = generate_password_hash(password)
+
+            #add all that information into my data base
+            db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
+
+            # Remember which user has logged in
+
+            rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+            session["user_id"] = rows[0]["id"]
+
+            return redirect("/")
+
+    else:
+        #Display a form so that they can register for a new account
+        return render_template("register.html")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
