@@ -130,15 +130,10 @@ def quote():
         if lookup(request.form.get("symbol")) == "None":
             return apology("That stock doesn't exist", 403)
         else:
-            return redirect("/quote/quoted")
+            return render_template("quoted.html", name = result["name"], price = usd(result["price"]), symbol = result["symbol"])
 
     else:
         return render_template("quote.html")
-
-@app.route("/quote/quoted")
-def quoted():
-    #gotta find out how to display the quoted. embedding within it one or more values from lookup
-    return render_template("quoted.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
