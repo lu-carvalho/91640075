@@ -108,7 +108,7 @@ def logout():
 
 
 @app.route("/quote", methods=["GET", "POST"])
-@login_required
+#@login_required
 def quote():
     """Get stock quote."""
     if request.method == "POST":
@@ -117,7 +117,7 @@ def quote():
             return apology("That stock doesn't exist", 403)
 
         else:
-            return redirect("/quoted", name="companyName" price="price")
+            return redirect("/quoted", name="companyName", price="price")
 
     else:
         return render_template("quote.html")
