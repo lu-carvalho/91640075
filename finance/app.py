@@ -83,14 +83,13 @@ def buy():
         if shares <= 0:
             return apology("please enter a valid amount of shares")
 
-       result = lookup(request.form.get("symbol"))
+        result = lookup(request.form.get("symbol"))
 
-        user_id = session["user_id"]
-        cash = int(db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"])
         price = result[price]
         name = result[name]
         symbol = result[symbol]
-
+        user_id = session["user_id"]
+        cash = int(db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"])
         new_cash = cash - price * shares
 
         if new_cash < 0:
