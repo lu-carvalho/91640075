@@ -149,10 +149,6 @@ def register():
         #Display a form so that they can register for a new account
         return render_template("register.html")
 
-    """Register user"""
-    return apology("TODO")
-
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
