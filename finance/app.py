@@ -85,20 +85,19 @@ def buy():
 
         result = lookup(request.form.get("symbol"))
 
-        item_price = result[price]
+        price = result[price]
         name = result[name]
         symbol = result[symbol]
         user_id = session["user_id"]
         cash = int(db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"])
-        total = item_price * shares
-        new_cash = cash - total
+        new_cash = cash - price * shares
 
-        if cash < total:
+        if new_cash < 0:
             return apology("You gonna need more cash for that")
 
         else:
             #add the stock purchase to the user's porfolio and update cash amount
-            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, item_price, when())
+            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, price, when())
 
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
