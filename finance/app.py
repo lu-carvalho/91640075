@@ -80,10 +80,10 @@ def buy():
 
         result = lookup(request.form.get("symbol"))
 
-        price = (result[price])
+        price = result[price]
         name = result[name]
         symbol = result[symbol]
-        shares = (request.form.get("shares"))
+        shares = request.form.get("shares")
         user_id = session["user_id"]
         cash = int(db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"])
         new_cash = int(cash - price * shares)
