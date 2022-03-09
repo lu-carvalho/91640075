@@ -123,8 +123,8 @@ def quote():
         return render_template("quote.html")
 
 @app.route("/quoted")
-
-
+def quoted():
+    return render_template("quoted.html", )
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
