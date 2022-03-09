@@ -68,6 +68,7 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
+        price = result[price]
 
         if not request.form.get("symbol"):
             return apology("you must input a symbol")
@@ -85,7 +86,6 @@ def buy():
 
         result = lookup(request.form.get("symbol"))
 
-        price = result[price]
         name = result[name]
         symbol = result[symbol]
         user_id = session["user_id"]
