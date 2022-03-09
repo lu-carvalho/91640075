@@ -122,18 +122,24 @@ def logout():
 
 
 @app.route("/quote", methods=["GET", "POST"])
-#@login_required
+@login_required
 def quote():
     """Get stock quote."""
     if request.method == "POST":
 
         if lookup(request.form.get("symbol")) == "None":
             return apology("That stock doesn't exist", 403)
+
         else:
-            return render_template("quoted.html", name = result["name"], price = usd(result["price"]), symbol = result["symbol"])
+            return redirect("/quote/quoted")
 
     else:
         return render_template("quote.html")
+
+@app.route("/quote/quoted")
+def quoted():
+    #gotta find out how to display the quoted. embedding within it one or more values from lookup
+    return render_template("quoted.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
