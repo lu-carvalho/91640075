@@ -124,7 +124,7 @@ def quote():
 
 @app.route("/quoted")
 def quoted():
-    return render_template("quoted.html", )
+    return render_template("quoted.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
