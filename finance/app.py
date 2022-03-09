@@ -47,7 +47,7 @@ def index():
 
 
 @app.route("/buy", methods=["GET", "POST"])
-@login_required
+#@login_required
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
@@ -62,7 +62,7 @@ def buy():
             return apology("please enter a valid amount of shares")
 
         result = lookup(request.form.get("symbol"))
-        else: 
+
         return render_template("buy.html", invalid=True, symbol = request.form.get("symbol"))
 
     else:
