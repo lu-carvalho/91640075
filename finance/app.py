@@ -233,7 +233,10 @@ def register():
 @login_required
 def sell():
     if request.method == "POST":
-        pass
+        user_id = session["user_id"]
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+
 
     else:
         user_id = session["user_id"]
