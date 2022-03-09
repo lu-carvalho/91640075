@@ -122,7 +122,7 @@ def quote():
     else:
         return render_template("quote.html")
 
-@app.route("/quoted")
+@app.route("/quote/quoted")
 def quoted():
     return render_template("quoted.html")
 
