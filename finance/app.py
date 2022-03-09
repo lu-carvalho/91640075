@@ -251,7 +251,8 @@ def sell():
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + income)
-        db.execute["INSERT INTO o"]
+        db.execute("INSERT INTO orders (user_id, name, price, type, symbol) VALUES (?, ?, ?, ?, ?, ?)", user_id, name, -shares, price, "sell", symbol)
+        return redirect("/")
 
     else:
         user_id = session["user_id"]
