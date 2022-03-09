@@ -29,6 +29,11 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
+# create table and index in order to keep track of each user stock orders
+db.execute("CREATE TABLE IF NOT EXISTS orders (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, shares NUMERIC NOT NULL, price NUMERIC NOT NULL, timestamp TEXT, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES users(id))")
+
+db.execute("CREATE INDEX IF NOT EXISTS orders_by_user_id_index ON orders (user_id)")
+
 
 @app.after_request
 def after_request(response):
