@@ -32,7 +32,7 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 # create table and index in order to keep track of each user stock orders
-db.execute("CREATE TABLE IF NOT EXISTS orders (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, shares NUMERIC NOT NULL, price NUMERIC NOT NULL, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES users(id))")
+db.execute("CREATE TABLE IF NOT EXISTS orders (id INTEGER, user_id NUMERIC NOT NULL, symbol TEXT NOT NULL, shares NUMERIC NOT NULL, price NUMERIC NOT NULL, timestamp TEXT, PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES users(id))")
 
 db.execute("CREATE INDEX IF NOT EXISTS orders_by_user_id_index ON orders (user_id)")
 
@@ -83,7 +83,7 @@ def buy():
 
         else:
             #add the stock purchase to the user's porfolio and update cash amount
-            db.execute("INSERT INTO orders (user_id, symbol, shares, price) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, price)
+            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, price, when())
 
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
@@ -97,7 +97,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    rows = db.execute("SELECT symbol, shares, price FROM orders WHERE user_id = ?", session["user_id"])
+    rows = db.execute("SELECT symbol, shares, price, timestamp FROM orders WHERE user_id = ?", session["user_id"])
     return render_template("history.html", rows = rows)
 
 @app.route("/login", methods=["GET", "POST"])
@@ -237,7 +237,7 @@ def sell():
     db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
     # Log the transaction into orders
-    db.execute("INSERT INTO orders (user_id, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", user_id, symbol, -shares, price)
+    db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", user_id, symbol, -shares, price, when())
 
     return redirect("/")
 

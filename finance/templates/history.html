@@ -12,6 +12,7 @@
           <th scope="col"> Stock </th>
           <th scope="col"> Price (USD) </th>
           <th scope="col"> Amount </th>
+          <th scope="col"> When (UTC) </th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +24,7 @@
           <td>  {{ row["symbol"] }}  </td>
           <td>  {{ row["price"] }} </td>
           <td>  {{ row["shares"] }} </td>
+          <td>  {{ row["timestamp"] }} </td>
         </tr>
         {% endfor %}
       </body>
