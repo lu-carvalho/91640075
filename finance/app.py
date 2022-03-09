@@ -237,6 +237,15 @@ def sell():
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
 
+        if shares <= 0:
+            return apology("insert a positive number of shares")
+
+        price = lookup(symbol)["price"]
+        name = lookup(symbol)["name"]
+
+        current_shares = db.execute("SELECE shares FROM orders WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
+
+        
 
     else:
         user_id = session["user_id"]
