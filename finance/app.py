@@ -143,7 +143,7 @@ def register():
         #add all that information into my data base
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
 
-        return redirect("/login")
+        return redirect("/")
 
     else:
         #Display a form so that they can register for a new account
