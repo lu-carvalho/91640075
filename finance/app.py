@@ -124,7 +124,7 @@ def quote():
 
 @app.route("/quote/quoted")
 def quoted():
-    #gotta find out how to display the quoted 
+    #gotta find out how to display the quoted. embedding within it one or more values from lookup
     return render_template("quoted.html")
 
 @app.route("/register", methods=["GET", "POST"])
