@@ -232,8 +232,15 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
+    if request.method == "POST":
+        pass
+
+    else:
+        symbols = db.execute("SELECT symbol FROM orders WHERE user_id = ? GROUP BY symbol", user_id)
+        return render_template("sell.html", symbols=symbols)
+
     """Sell shares of stock"""
-    owns = own_shares()
+    #owns = own_shares()
     if request.method == "GET":
         return render_template("sell.html", owns = owns.keys())
 
