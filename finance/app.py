@@ -250,7 +250,7 @@ def sell():
             return apology("you don't have enough shares to sell")
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + income)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + income, user_id)
         db.execute("INSERT INTO orders (user_id, name, price, type, symbol) VALUES (?, ?, ?, ?, ?)", user_id, name, -shares, price, symbol)
         return redirect("/")
 
