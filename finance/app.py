@@ -61,7 +61,7 @@ def buy():
         elif request.get.form("shares") < 0:
             return apology("please enter a valid amount of shares")
 
-        return redirect 
+        return redirect
 
     else:
         return render_template("buy.html")
@@ -129,6 +129,7 @@ def quote():
 
         if lookup(request.form.get("symbol")) == "None":
             return apology("That stock doesn't exist", 403)
+        elif: 
 
         else:
             return redirect("/quote/quoted")
