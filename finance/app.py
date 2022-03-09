@@ -134,7 +134,7 @@ def quote():
         else:
             symbol = request.form.get("symbol")
             result = lookup(symbol)
-            return render_template("quoted.html", name = result["name"], price = usd(result["price"]), symbol = result["symbol"])
+        return render_template("quoted.html", name = result["name"], price = usd(result["price"]), symbol = result["symbol"])
 
     else:
         return render_template("quote.html")
