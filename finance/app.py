@@ -138,7 +138,7 @@ def register():
         # If there are no errors, insert the new user into the users table and log him in
         username = request.form.get("username")
         password = request.form.get("password")
-        confirm_password = request.form.get("confirm_password")
+        # i don't think this is necessary confirm_password = request.form.get("confirm_password")
 
         hash = generate_password_hash(password)
 
