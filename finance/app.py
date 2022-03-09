@@ -80,7 +80,7 @@ def buy():
 
         result = lookup(request.form.get("symbol"))
 
-        price = int(result[price])
+        price = result[price]
         name = result[name]
         symbol = result[symbol]
         shares = int(request.form.get("shares"))
