@@ -215,4 +215,38 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    owns = own_shares()
+    if request.method == "GET":
+        return render_template("sell.html", owns = owns.keys())
+
+    symbol = request.form.get("symbol")
+    shares = int(request.form.get("shares"))
+
+    #see if there are shares to sell
+    if owns[symbol] < shares:
+        return render_template("sell.html", invalid=True, symbol=symbol, owns = owns.keys())
+
+    # sell, same procediment as buy, but like, in reverse
+    result = lookup(symbol)
+    user_id = session["user_id"]
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]['cash']
+    price = result["price"]
+    new_cash = cash + price * shares
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
+
+    # Log the transaction into orders
+    db.execute("INSERT INTO orders (user_id, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", user_id, symbol, -shares, price)
+
+    return redirect("/")
+
+def own_shares():
+    """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
+    user_id = session["user_id"]
+    owns = {}
+    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
+    for q in query:
+        symbol, shares = q["symbol"], q["shares"]
+        owns[symbol] = owns.setdefault(symbol, 0) + shares
+    # filter zero-share stocks
+    owns = {k: v for k, v in owns.items() if v != 0}
+    return owns
