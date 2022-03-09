@@ -133,9 +133,7 @@ def register():
 
         # make sure the username is not already taken
 
-        rows2 = db.execute("SELECT ? FROM users", username)
-
-        elif len(rows2) != 0:
+        elif len(db.execute("SELECT ? FROM users", username)) != 0:
             return apology("that username is already taken")
 
         # If there are no errors, insert the new user into the users table and log him in
@@ -148,8 +146,7 @@ def register():
         #add all that information into my data base
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
 
-        # Remember which user has logged in
-        session["user_id"] = rows2[0]["id"]
+        # TODO: Remember which user has logged in
 
         return redirect("/")
 
