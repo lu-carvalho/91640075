@@ -177,8 +177,10 @@ def register():
         #add all that information into my data base
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
 
-        # TODO: Remember which user has logged in
-        
+        # Remember which user has logged in
+
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        session["user_id"] = rows[0]["id"]
 
         return redirect("/")
 
