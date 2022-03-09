@@ -8,6 +8,8 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import apology, login_required, lookup, usd
 
+from datetime import datetime, timezone
+
 # Configure application
 app = Flask(__name__)
 
@@ -250,3 +252,7 @@ def own_shares():
     # filter zero-share stocks
     owns = {k: v for k, v in owns.items() if v != 0}
     return owns
+
+def when():
+    now_utc = datetime.now(timezone.utc)
+    return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
