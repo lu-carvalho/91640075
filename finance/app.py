@@ -242,10 +242,16 @@ def sell():
 
         price = lookup(symbol)["price"]
         name = lookup(symbol)["name"]
+        income = shares * price
 
-        current_shares = db.execute("SELECE shares FROM orders WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
+        current_shares = db.execute("SELECE shares FROM orders WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares"]
 
-        
+        if current_shares < shares:
+            return apology("you don't have enough shares to sell")
+
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + income)
+
 
     else:
         user_id = session["user_id"]
