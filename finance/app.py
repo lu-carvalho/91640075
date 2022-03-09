@@ -165,7 +165,7 @@ def quote():
     if request.method == "POST":
 
         if lookup(request.form.get("symbol")) == "None":
-            return apology("That stock doesn't exist", 403)
+            return apology("That stock doesn't exist")
 
         else:
             symbol = request.form.get("symbol")
