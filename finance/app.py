@@ -184,6 +184,10 @@ def register():
         if not request.form.get("username"):
             return apology("must provide username", 400)
 
+        # make sure the username is not already taken
+        elif len(db.execute("SELECT username FROM users WHERE username = ?", username)) > 0:
+            return apology("that username is already taken")
+
         # do nor allow blank password
         elif not request.form.get("password"):
             return apology("must provide password", 400)
@@ -191,11 +195,6 @@ def register():
         # password and confirmation match
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("password and confirmation don't match", 400)
-
-        # make sure the username is not already taken
-
-        elif len(db.execute("SELECT username FROM users WHERE username = ?", username)) > 0:
-            return apology("that username is already taken")
 
         # If there are no errors, insert the new user into the users table and log him in
 
