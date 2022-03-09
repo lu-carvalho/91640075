@@ -129,8 +129,6 @@ def quote():
 
         if lookup(request.form.get("symbol")) == "None":
             return apology("That stock doesn't exist", 403)
-        elif: 
-
         else:
             return redirect("/quote/quoted")
 
