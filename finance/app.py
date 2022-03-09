@@ -177,15 +177,15 @@ def register():
 
         # do not allow blank username
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # do nor allow blank password
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # password and confirmation match
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("password and confirmation don't match", 403)
+            return apology("password and confirmation don't match", 400)
 
         # make sure the username is not already taken
 
