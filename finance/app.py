@@ -244,7 +244,7 @@ def sell():
         name = lookup(symbol)["name"]
         income = shares * price
 
-        current_shares = db.execute("SELECE shares FROM orders WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares"]
+        current_shares = db.execute("SELECT shares FROM orders WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares"]
 
         if current_shares < shares:
             return apology("you don't have enough shares to sell")
