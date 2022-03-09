@@ -113,13 +113,11 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
 
-        s
+        lookup(request.form.get("symbol"))
+        return redirect("/quoted")
 
     else:
         return render_template("quote.html")
-
-
-    return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
