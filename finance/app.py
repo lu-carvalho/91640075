@@ -61,6 +61,7 @@ def buy():
         elif request.get.form("shares") < 0:
             return apology("please enter a valid amount of shares")
 
+        return redirect 
 
     else:
         return render_template("buy.html")
