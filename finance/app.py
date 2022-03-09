@@ -122,7 +122,7 @@ def logout():
 
 
 @app.route("/quote", methods=["GET", "POST"])
-#@login_required
+@login_required
 def quote():
     """Get stock quote."""
 
