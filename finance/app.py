@@ -85,7 +85,7 @@ def buy():
 
         result = lookup(request.form.get("symbol"))
 
-        price = result[price]
+        price = result["price"]
         name = result[name]
         symbol = result[symbol]
         user_id = session["user_id"]
