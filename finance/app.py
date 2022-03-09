@@ -67,31 +67,40 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    if request.method == "GET":
+    if request.method == "POST":
+
+        if not request.form.get("symbol"):
+            return apology("you must input a symbol")
+
+        elif lookup(request.form.get("symbol")) == None:
+            return apology("That stock doesn't exist")
+
+        elif (request.form.get("shares")) < 0:
+            return apology("please enter a valid amount of shares")
+
+        result = lookup(request.form.get("symbol"))
+
+        price = (result[price])
+        name = result[name]
+        symbol = result[symbol]
+        shares = (request.form.get("shares"))
+        user_id = session["user_id"]
+        cash = int(db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"])
+        new_cash = int(cash - price * shares)
+
+        if new_cash < 0:
+            return apology("You gonna need more cash for that")
+
+        else:
+            #add the stock purchase to the user's porfolio and update cash amount
+            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?", user_id, symbol, shares, price, when())
+
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
+
+            return redirect("/")
+
+    else:
         return render_template("buy.html")
-
-    result = lookup(request.form.get("symbol"))
-    if not result:
-        return render_template("buy.html", invalid=True, symbol = request.form.get("symbol"))
-
-    name = result["name"]
-    price = result["price"]
-    symbol = result["symbol"]
-    shares = int(request.form.get("shares")) # Don't forget: convert str to int
-    user_id = session["user_id"]
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]['cash']
-    # check if user can afford the purchase
-    remain = cash - price * shares
-    if remain < 0:
-        return apology("Insufficient Cash. Failed Purchase.")
-
-    # deduct order cost from user's remaining balance (i.e. cash)
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)
-
-    db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
-                                     user_id, symbol, shares, price, time_now())
-
-    return redirect("/")
 
 
 @app.route("/history")
