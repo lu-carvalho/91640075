@@ -174,6 +174,7 @@ def quoted():
 def register():
     username = request.form.get("username")
     password = request.form.get("password")
+    confirmation = request.form.get("confirmation")
 
     if request.method == "POST":
         #Once that form is submited, check for errors.
@@ -196,8 +197,6 @@ def register():
             return apology("that username is already taken")
 
         # If there are no errors, insert the new user into the users table and log him in
-
-        # i don't think this is necessary confirmation = request.form.get("confirmation")
 
         else:
             hash = generate_password_hash(password)
